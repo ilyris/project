@@ -66,14 +66,21 @@ function toggleMenu(){
 document.querySelector(".main-ul").classList.toggle("on");
 }
 
-// function scrollDown() {
-//   document.querySelector('.scroll-button').on('click', function(e) {
-//     e.preventDefault();
-//     document.getElementsByTagName('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
-//   };
-// };
 
-console.log("I just want to see some pushed commits baby!!");
+
+var parallaxContainer = document.querySelector('.card-1');
+
+   parallaxContainer.addEventListener ("mousemove", function(e) {
+    
+    let screenWidth = window.outerWidth;
+    let screenHeight = window.outerHeight;
+    
+    document.querySelector(".image-container").style.transform = 'translate(-' + e.pageX/screenWidth *20 + 'px, -' + e.pageY/screenHeight * 20 + "px)";
+    
+    document.querySelector(".first-name").style.transform = "translate(" + e.pageX/screenWidth * 45 + "px, " + e.pageY/screenHeight * 45 + "px)";
+    
+    document.querySelector(".last-name").style.transform = "translate(" + e.pageX/screenWidth * 45 + "px, " + e.pageY/screenHeight * 45 + "px)";
+    });
 
 
 
