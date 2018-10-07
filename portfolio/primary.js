@@ -67,19 +67,20 @@ document.querySelector(".main-ul").classList.toggle("on");
 }
 
 
-
+// storing the card-1 element into a variable to use in a mousemove function
 var parallaxContainer = document.querySelector('.card-1');
-
+  //create a function and attach an eventlister that listens for mouse movement
    parallaxContainer.addEventListener ("mousemove", function(e) {
-    
+    //storing the windows outer width into a variable so we can use it in our mousemove function
     let screenWidth = window.outerWidth;
+    //storing the windows outer height into a variable so we can use it in our mousemove function
     let screenHeight = window.outerHeight;
-    
+    // allows the image-container element to move with the mouse
     document.querySelector(".image-container").style.transform = 'translate(-' + e.pageX/screenWidth *20 + 'px, -' + e.pageY/screenHeight * 20 + "px)";
-    
-    document.querySelector(".first-name").style.transform = "translate(" + e.pageX/screenWidth * 45 + "px, " + e.pageY/screenHeight * 45 + "px)";
-    
-    document.querySelector(".last-name").style.transform = "translate(" + e.pageX/screenWidth * 45 + "px, " + e.pageY/screenHeight * 45 + "px)";
+    // allows the first-name element to move with the mouse
+    document.querySelector(".first-name").style.transform = "translate(" + e.pageX/screenWidth * 25 + "px, " + e.pageY/screenHeight * 25 + "px)";
+    // allows the last-name element to move with the mouse
+    document.querySelector(".last-name").style.transform = "translate(" + e.pageX/screenWidth * 25 + "px, " + e.pageY/screenHeight * 25 + "px)";
     });
 
 
