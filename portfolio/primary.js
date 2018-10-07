@@ -13,7 +13,6 @@ for (var i = 0; i < links.length; i++) {
   // }
 }
 function clickFunction() {
-  scrollButton.animate([scrollTop.offset().top],{ duration: 1000});
   console.log("clicked");
 }
 
@@ -54,17 +53,6 @@ function windowScroll() {
     document.querySelector('.contact-link-block').style.top = 0 + scrolled * .05 + "px";
 
 };
-
-
-
-	
-
-document.querySelector(".toggle-mnu").addEventListener("click",toggleMenu);
-
-function toggleMenu(){
-  this.classList.toggle ("toggle-active");
-document.querySelector(".main-ul").classList.toggle("on");
-}
 
 
 // storing the card-1 element into a variable to use in a mousemove function
