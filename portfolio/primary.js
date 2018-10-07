@@ -76,14 +76,15 @@ var parallaxContainer = document.querySelector('.card-1');
     //storing the windows outer height into a variable so we can use it in our mousemove function
     let screenHeight = window.outerHeight;
     // allows the image-container element to move with the mouse
-    document.querySelector(".image-container").style.transform = 'translate(-' + e.pageX/screenWidth *20 + 'px, -' + e.pageY/screenHeight * 20 + "px)";
+    document.querySelector(".image-container").style.transform = 'translate(-' + e.pageX/screenWidth * 10 + 'px, -' + e.pageY/screenHeight * 10 + "px)";
     // allows the first-name element to move with the mouse
-    document.querySelector(".first-name").style.transform = "translate(" + e.pageX/screenWidth * 25 + "px, " + e.pageY/screenHeight * 25 + "px)";
+    document.querySelector(".first-name").style.transform = "translate(" + e.pageX/screenWidth * 15 + "px, " + e.pageY/screenHeight * 15 + "px)";
     // allows the last-name element to move with the mouse
-    document.querySelector(".last-name").style.transform = "translate(" + e.pageX/screenWidth * 25 + "px, " + e.pageY/screenHeight * 25 + "px)";
-
+    document.querySelector(".last-name").style.transform = "translate(" + e.pageX/screenWidth * 15 + "px, " + e.pageY/screenHeight * 15 + "px)";
+    document.querySelector(".about-me-container").style.transform = "translate(" + e.pageX/screenWidth * 15 + "px, " + e.pageY/screenHeight * 15 + "px)";
+    document.querySelector(".contact-link-block").style.transform = "translate(" + e.pageX/screenWidth * 15 + "px, " + e.pageY/screenHeight * 15 + "px)";
+    
   });
-
 
 
 
