@@ -81,7 +81,8 @@ var parallaxContainer = document.querySelector('.card-1');
     document.querySelector(".first-name").style.transform = "translate(" + e.pageX/screenWidth * 25 + "px, " + e.pageY/screenHeight * 25 + "px)";
     // allows the last-name element to move with the mouse
     document.querySelector(".last-name").style.transform = "translate(" + e.pageX/screenWidth * 25 + "px, " + e.pageY/screenHeight * 25 + "px)";
-    });
+
+  });
 
 
 

@@ -34,7 +34,7 @@
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(8, 1fr);
-  height: 100vh;
+  height: 1000px;
   background: rgb(227, 230, 235);
 }
 
@@ -200,9 +200,8 @@ h2.name {
   width: 100%;
   position: relative;
   color: #000;
-  transform: translate(10%,5%);
+  left: 8%;
   font-family: 'Anton', sans-serif;
-
 }
 
 .last-name {
