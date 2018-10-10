@@ -55,6 +55,7 @@ function windowScroll() {
 
 };
 
+//grabs the element .toggle-mnu and adds an event list
 document.querySelector(".toggle-mnu").addEventListener("click",toggleMenu);
 
 function toggleMenu(){
