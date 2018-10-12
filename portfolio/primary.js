@@ -1,21 +1,24 @@
 // var links grabs all links by tag name "a"
 var links = document.getElementsByTagName("a");
-var scrollButton =document.querySelector('scroll-button');
-//since TagName grabs multiple tags, and turns them into a HTML collection
-//a Loop has to be specified in order to loop through all the links
+var scrollButton = document.querySelector('.scroll-button');
+// //since TagName grabs multiple tags, and turns them into a HTML collection
+// //a Loop has to be specified in order to loop through all the links
 for (var i = 0; i < links.length; i++) {
   //adding a click even listener and passing in our function called "clickFunction" so on click fire the 
   links[i].addEventListener("click", clickFunction);
-  // if(scrollButton == "clicked"){
-  //   $("html, body").animate({
-  //     scrollTop: $(".scroll-button").offset().top
-  // }, 1000);
-  // }
 }
 function clickFunction() {
-  scrollButton.animate([scrollTop.offset().top],{ duration: 1000});
   console.log("clicked");
 }
+
+scrollButton.addEventListener("click", smoothScrollButton);
+
+function smoothScrollButton() {
+  $('html, body').animate({
+    scrollTop: $(this).offset().top
+  }, 500, function(){
+  console.log('I scrolled!');
+})}
 
 //runs the function WindowScroll onscroll
 window.onscroll = function () {
@@ -35,13 +38,8 @@ function windowScroll() {
   var animateSkills = document.querySelectorAll(".skills");
   var yPosition = window.pageYOffset;
   for (var i = 0; i < animateSkills.length; i++) {
-    // if (yPosition <= 149) {
-    //   animateSkills[i].classList.remove("hide");
-    // }
-    // else
     if (yPosition > 80) {
       animateSkills[i].classList.add("fall-in-animation");
-      //animateSkills[i].classList.remove("hide");    Didnt need, kept for reference
     }
   }
   //stores the windows scroll movment into the document element, document object.

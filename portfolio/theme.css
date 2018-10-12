@@ -530,6 +530,7 @@ a.projects-hover-effect:hover {
 
 .card-1 .scroll-button span {
   position: absolute;
+  cursor: pointer;
   top: 0;
   left: 50%;
   width: 30px;
