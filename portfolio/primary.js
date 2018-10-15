@@ -11,20 +11,25 @@ function clickFunction() {
   console.log("clicked");
 }
 
-scrollButton.addEventListener("click", smoothScrollButton);
+// scrollButton.addEventListener("click", smoothScrollButton);
 
-function smoothScrollButton() {
-  $('html, body').animate({
-    scrollTop: $(this).offset().top
-  }, 500, function(){
-  console.log('I scrolled!');
-})}
+// function smoothScrollButton() {
+//   var scrollTheWindowButton = document.querySelector('html, body');
+//   for (var i = 0; i <  scrollTheWindowButton.length; i++) {
+//     scrollTheWindowButton[i].animate([{scrollTop = this.offsetTop}], 500, 'linear' 
+//     )};
+//   }
+//   .animate({
+//     scrollTop: $(this).offset().top
+//   }, 500, function(){
+//   console.log('I scrolled!');
+// })
 
 //runs the function WindowScroll onscroll
 window.onscroll = function () {
   windowScroll();
 };
-// sets up the background for the navbar on scroll
+// fires all window scrolling effects
 function windowScroll() {
   //graabs the element with a class of "main-nav"
   var mainNav = document.querySelector(".main-nav");
@@ -35,6 +40,7 @@ function windowScroll() {
     //mainNav is set to have the background set to true when it is scrolled > 600
     mainNav.scrollTop / screen.height > .75 || document.documentElement.scrollTop / screen.height  > .75
   );
+  
   var animateSkills = document.querySelectorAll(".skills");
   var yPosition = window.pageYOffset;
   for (var i = 0; i < animateSkills.length; i++) {

@@ -245,9 +245,21 @@ h2.name {
   z-index: 100;
   font-weight: 800;
 }
+#card-4 {
+  width: 100%;
+  background: #7d2fe2;
+  height: 960px;
+}
+
+.random-image {
+  background: url(annie10.jpg);
+  background-attachment: fixed;
+  width: 100%;
+  height: auto;
+}
 
 
-.card-2 {
+#card-2 {
   background: rgb(227, 230, 235);
   width: 100%;
   position: relative;
@@ -405,10 +417,9 @@ a.projects-hover-effect:hover {
 }
 
 .scrolled-nav-background {
-  background : #7d2fe2;
+  background : #fff;
   transition: background 300ms ease-in-out;
-  box-shadow: 0px 2px 5px 0px #888484;
-  position: fixed;
+  box-shadow: 0px 0px 5px 0px #888484;
 }
 
 .fall-in-animation {
