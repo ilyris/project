@@ -539,38 +539,31 @@ a.projects-hover-effect:hover {
   }
 }
 
-.card-1 .scroll-button span {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 50%;
-  width: 30px;
-  height: 50px;
-  margin-left: -15px;
-  border: 2px solid #0e0e0e;
-  border-radius: 50px;
-  box-sizing: border-box;
+.card-1 .scroll-button:hover {
+  color: #7d2fe2;
+  transition: all .2s ease-in-out;
 }
 
 .card-1 .scroll-button {
   position: relative;
   z-index: 2;
   display: inline-block;
-  -webkit-transform: translate(0, -50%);
-  transform: translate(0, -50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
   color: #000000;
   font: normal 400 20px/1 'Josefin Sans', sans-serif;
   letter-spacing: .1em;
   text-decoration: none;
   transition: opacity .3s;
-  grid-row: 8/8;
-  grid-column: 3/7;
+  grid-row: 8 / 8;
+  grid-column: 5 /5 ;
   text-align: center;
+  display: flex;
+  flex-direction: column-reverse;
+  width: 50%;
+  height: 75%;
 }
 
-.card-1 .scroll-button {
-  padding: 60px 10px 10px;
-}
 .card-1 .scroll-button span {
   position: absolute;
   top: 0;
@@ -592,11 +585,15 @@ a.projects-hover-effect:hover {
   margin-left: -3px;
   background-color: #0e0e0e;
   border-radius: 100%;
-  -webkit-animation: sdb10 2s infinite;
-  animation: sdb10 2s infinite;
+  -webkit-animation: wheelScrolled 2s infinite;
+  animation: wheelScrolled 2s infinite;
   box-sizing: border-box;
 }
-@-webkit-keyframes sdb10 {
+.card-1 .scroll-button span:hover {
+  border: 2px solid #7d2fe2;
+  transition: all .2s ease-in-out;
+}
+@-webkit-keyframes wheelScrolled {
   0% {
     -webkit-transform: translate(0, 0);
     opacity: 0;
@@ -612,7 +609,7 @@ a.projects-hover-effect:hover {
     opacity: 0;
   }
 }
-@keyframes sdb10 {
+@keyframes wheelScrolled {
   0% {
     transform: translate(0, 0);
     opacity: 0;
