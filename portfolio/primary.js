@@ -1,9 +1,9 @@
 // var links grabs all links by tag name "a"
-var links = document.getElementsByTagName("a");
-var scrollButton = document.querySelector('.scroll-button');
+const links = document.getElementsByTagName("a");
+const scrollButton = document.querySelector('.scroll-button');
 // //since TagName grabs multiple tags, and turns them into a HTML collection
 // //a Loop has to be specified in order to loop through all the links
-for (var i = 0; i < links.length; i++) {
+for (let i = 0; i < links.length; i++) {
   //adding a click even listener and passing in our function called "clickFunction" so on click fire the 
   links[i].addEventListener("click", clickFunction);
 }
@@ -32,7 +32,7 @@ window.onscroll = function () {
 // fires all window scrolling effects
 function windowScroll() {
   //graabs the element with a class of "main-nav"
-  var mainNav = document.querySelector(".main-nav");
+  const mainNav = document.querySelector(".main-nav");
   //classList adds class scrolled-nav-background if the variable "MainNav" does not have that class
   mainNav.classList.toggle(
     //if mainNav does not have an attribute of "test" then it turns true and runs test
@@ -41,16 +41,17 @@ function windowScroll() {
     mainNav.scrollTop / screen.height > .75 || document.documentElement.scrollTop / screen.height  > .75
   );
   
-  var animateSkills = document.querySelectorAll(".skills");
-  var yPosition = window.pageYOffset;
-  for (var i = 0; i < animateSkills.length; i++) {
+  const animateSkills = document.querySelectorAll(".skills");
+  const yPosition = window.pageYOffset;
+  for (let i = 0; i < animateSkills.length; i++) {
     if (yPosition > 80) {
       animateSkills[i].classList.add("fall-in-animation");
     }
   }
   //stores the windows scroll movment into the document element, document object.
-  var scrolled = document.documentElement.scrollTop;
+  const scrolled = document.documentElement.scrollTop;
   //allows these three different elelements to be moved with the window scroll at different speeds.
+
     document.querySelector('.about-me-container').style.top = 0 - scrolled * .25 + "px";
     document.querySelector('.first-name').style.top = 0 - scrolled * .20 + "px";
     document.querySelector('.last-name').style.top = 350 - scrolled * .10 + "px";
@@ -69,7 +70,7 @@ document.querySelector(".main-ul").classList.toggle("on");
 
 
 // storing the card-1 element into a variable to use in a mousemove function
-var parallaxContainer = document.querySelector('.card-1');
+const parallaxContainer = document.querySelector('.card-1');
   //create a function and attach an eventlister that listens for mouse movement
    parallaxContainer.addEventListener ("mousemove", function(e) {
     //storing the windows outer width into a variable so we can use it in our mousemove function
