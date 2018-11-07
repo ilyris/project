@@ -7,9 +7,7 @@ for (let i = 0; i < links.length; i++) {
   //adding a click even listener and passing in our function called "clickFunction" so on click fire the 
   links[i].addEventListener("click", clickFunction);
 }
-function clickFunction() {
-  console.log("clicked");
-}
+const clickFunction = () => console.log("clicked");
 
 // scrollButton.addEventListener("click", smoothScrollButton);
 
@@ -26,11 +24,11 @@ function clickFunction() {
 // })
 
 //runs the function WindowScroll onscroll
-window.onscroll = function () {
+window.onscroll =  () => {
   windowScroll();
 };
 // fires all window scrolling effects
-function windowScroll() {
+const windowScroll = () => {
   //graabs the element with a class of "main-nav"
   const mainNav = document.querySelector(".main-nav");
   //classList adds class scrolled-nav-background if the variable "MainNav" does not have that class
@@ -63,7 +61,7 @@ function windowScroll() {
 //grabs the element .toggle-mnu and adds an event list
 document.querySelector(".toggle-mnu").addEventListener("click",toggleMenu);
 
-function toggleMenu(){
+const toggleMenu = () => {
   this.classList.toggle ("toggle-active");
 document.querySelector(".main-ul").classList.toggle("on");
 }
