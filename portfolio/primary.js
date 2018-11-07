@@ -31,7 +31,7 @@ window.onscroll =  () => {
 };
 // fires all window scrolling effects
 const windowScroll = () => {
-  //graabs the element with a class of "main-nav"
+  //grabs the element with a class of "main-nav"
   const mainNav = document.querySelector(".main-nav");
   //classList adds class scrolled-nav-background if the variable "MainNav" does not have that class
   mainNav.classList.toggle(
@@ -61,13 +61,12 @@ const windowScroll = () => {
 };
 
 //grabs the element .toggle-mnu and adds an event list
-document.querySelector(".toggle-mnu").addEventListener("click",toggleMenu);
+// document.querySelector(".toggle-mnu").addEventListener("click",toggleMenu);
 
-const toggleMenu = () => {
+function toggleMenu() {
   this.classList.toggle ("toggle-active");
 document.querySelector(".main-ul").classList.toggle("on");
 }
-
 
 // storing the card-1 element into a variable to use in a mousemove function
 const parallaxContainer = document.querySelector('.card-1');
