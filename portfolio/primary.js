@@ -3,11 +3,13 @@ const links = document.getElementsByTagName("a");
 const scrollButton = document.querySelector('.scroll-button');
 // //since TagName grabs multiple tags, and turns them into a HTML collection
 // //a Loop has to be specified in order to loop through all the links
-for (let i = 0; i < links.length; i++) {
-  //adding a click even listener and passing in our function called "clickFunction" so on click fire the 
-  links[i].addEventListener("click", clickFunction);
-}
-const clickFunction = () => console.log("clicked");
+// for (let i = 0; i < links.length; i++) {
+//   //adding a click even listener and passing in our function called "clickFunction" so on click fire the 
+//   links[i].addEventListener("click", clickFunction);
+// }
+// function clickFunction() {
+//  console.log("clicked");
+// }
 
 // scrollButton.addEventListener("click", smoothScrollButton);
 
