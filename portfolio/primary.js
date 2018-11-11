@@ -61,7 +61,7 @@ const windowScroll = () => {
 };
 
 //grabs the element .toggle-mnu and adds an event list
-// document.querySelector(".toggle-mnu").addEventListener("click",toggleMenu);
+document.querySelector(".toggle-mnu").addEventListener("click",toggleMenu);
 
 function toggleMenu() {
   this.classList.toggle ("toggle-active");
