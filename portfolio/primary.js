@@ -1,29 +1,7 @@
-// var links grabs all links by tag name "a"
+
 const links = document.getElementsByTagName("a");
 const scrollButton = document.querySelector('.scroll-button');
-// //since TagName grabs multiple tags, and turns them into a HTML collection
-// //a Loop has to be specified in order to loop through all the links
-// for (let i = 0; i < links.length; i++) {
-//   //adding a click even listener and passing in our function called "clickFunction" so on click fire the 
-//   links[i].addEventListener("click", clickFunction);
-// }
-// function clickFunction() {
-//  console.log("clicked");
-// }
 
-// scrollButton.addEventListener("click", smoothScrollButton);
-
-// function smoothScrollButton() {
-//   var scrollTheWindowButton = document.querySelector('html, body');
-//   for (var i = 0; i <  scrollTheWindowButton.length; i++) {
-//     scrollTheWindowButton[i].animate([{scrollTop = this.offsetTop}], 500, 'linear' 
-//     )};
-//   }
-//   .animate({
-//     scrollTop: $(this).offset().top
-//   }, 500, function(){
-//   console.log('I scrolled!');
-// })
 
 //runs the function WindowScroll onscroll
 window.onscroll =  () => {
@@ -57,7 +35,6 @@ const windowScroll = () => {
     document.querySelector('.last-name').style.top = 350 - scrolled * .10 + "px";
     document.querySelector('.image-container').style.top = 0 - scrolled * .05 + "px";
     document.querySelector('.contact-link-block').style.top = 0 + scrolled * .05 + "px";
-
 };
 
 //grabs the element .toggle-mnu and adds an event list
@@ -78,9 +55,7 @@ const parallaxContainer = document.querySelector('.card-1');
     let screenHeight = window.outerHeight;
     // allows the image-container element to move with the mouse
     document.querySelector(".image-container").style.transform = 'translate(-' + e.pageX/screenWidth * 10 + 'px, -' + e.pageY/screenHeight * 10 + "px)";
-    // allows the first-name element to move with the mouse
     document.querySelector(".first-name").style.transform = "translate(" + e.pageX/screenWidth * 15 + "px, " + e.pageY/screenHeight * 15 + "px)";
-    // allows the last-name element to move with the mouse
     document.querySelector(".last-name").style.transform = "translate(" + e.pageX/screenWidth * 15 + "px, " + e.pageY/screenHeight * 15 + "px)";
     document.querySelector(".about-me-container").style.transform = "translate(" + e.pageX/screenWidth * 15 + "px, " + e.pageY/screenHeight * 15 + "px)";
     document.querySelector(".contact-link-block").style.transform = "translate(" + e.pageX/screenWidth * 15 + "px, " + e.pageY/screenHeight * 15 + "px)";
