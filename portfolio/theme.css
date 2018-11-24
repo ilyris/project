@@ -126,7 +126,7 @@ a.main-links:hover:after {
 
 .contact-link-block {
   grid-column: 5/9;
-  grid-row: 5/5;
+  grid-row: 4/5;
   position: relative;
   justify-self: center;
   align-self: center;
@@ -176,39 +176,31 @@ h2.name {
 }
 
 .image-container {
-  background: url(image-container-bg.jpeg);
+  background: url(pexels-photo-450035.jpeg);
   width: 100%;
   grid-column: 3/7;
-  grid-row: 4/6;
+  grid-row: 3/6;
   position: relative;
   min-width: 500px;
   height: 400px;
-  background-position: 100% 100%;
+  background-position: 65% 45%;
 
-}
-
-.name-container {
-  position: absolute;
-  width: 45%;
-  height: 100%;
-  padding-left: 30px;
 }
 
 .first-name {
-  font-size: 18em;
-  width: 100%;
-  position: relative;
+  font-size: 10em;
+  position: absolute;
   color: #000;
   left: 15%;
   font-family: 'Anton', sans-serif;
 }
 
 .last-name {
-  font-size: 18em;
+  font-size: 14em;
   position: absolute;
   z-index: 1;
+  top: 400px;
   color: #7d2fe2;
-  top: 350px;
   font-family: 'Anton', sans-serif;
   left: 10%;
 
@@ -218,7 +210,7 @@ h2.name {
   position: relative;
   display: inline-flex;
   grid-column: 6 / 8;
-  grid-row: 4 / 4;
+  grid-row: 3 / 4;
   text-align: center;
   flex-direction: column;
 }
@@ -236,13 +228,18 @@ h2.name {
 .about-me-text {
   margin: 0;
   font-size: 22px;
-  color: #aa6afd;
+  color: #000000;
   padding: 27px 0px;
   box-sizing: border-box;
   letter-spacing: 2px;
   line-height: 1.5em;
   z-index: 100;
   font-weight: 800;
+  text-align: left;
+}
+.about-me-text span {
+  color: #673AB7;
+  font-size: 28px;
 }
 
 .card-1 .scroll-button:hover {
@@ -300,7 +297,9 @@ h2.name {
   transition: all .2s ease-in-out;
 }
 
-
+.skills:hover .skill-title {
+color: #fff;
+}
 
 
 #card-4 {
@@ -332,7 +331,6 @@ h2.name {
   justify-content: space-evenly;
   margin: 0 auto;
 }
-
 .skills {
   visibility: hidden;
   display: flex;
@@ -342,22 +340,50 @@ h2.name {
   background: #b7b6b6;
   min-width: 225px;
   height: 300px;
-  box-shadow: 9px 9px 15px -9px #000000;
   margin: 10px;
-  border-radius: 15px;
   box-sizing: border-box;
   flex-basis: 15%;
+  transition: all ease 300ms;
 }
-.skills-logo {
-  min-width: 100px;
-  max-width: 100px;
-  height: 100px;
+.skills:hover {
+  background: #673AB7;
+}
+.skills:hover .fa-js {
+  color: #f0db4f;
+}
+.skills:hover .fa-css3-alt {
+  color: rgb(38, 77, 228);
+}
+.skills:hover .fa-drupal {
+  color: rgb(0, 114, 192);
+}
+.skills:hover .fa-html5 {
+  color: #e54c21;
+}
+.skills:hover .fa-git-square {
+  color:rgb(240, 80, 51);
+}
+.skills:hover .fa-github {
+  color:#000;
 }
 .skill-title {
   color: #000;
+  font-size: 34px;
   margin: 0px 2px;
   font-size: 28px;
+  transition: all ease 300ms;
 }
+.fa-drupal,
+.fa-js,
+.fa-html5,
+.fa-css3-alt,
+.fa-github,
+.fa-git-square {
+  font-size: 100px;
+  color: black;
+  transition: all ease 300ms;
+}
+
 .skill-card-container {
   width: 100%;
   display: flex;
@@ -382,6 +408,8 @@ h2.name {
   color: #040404;
   font-weight: 600;
   margin: 10px 0;
+  width: 100%;
+  text-align: center;
 }
 /* Start of Card3 / projects */
 .sidebar-left {
@@ -422,29 +450,8 @@ h2.name {
   overflow: hidden;
 }
 
-.dentistry-container {
-  flex-basis: 40%;
-  display: flex;
-  box-sizing: border-box;
-  height: fit-content;
-  justify-content: flex-end;
-}
-
-.small-image-dentistry {
-  background: url(dentistry.jpeg);
-  background-size: cover;
-  display: flex;
-  flex-basis: 100%;
-  height: 300px;
-  justify-content: flex-end;
-  box-sizing: border-box;
-  margin: 10px;
-  box-shadow: 2px 2px 2px 2px #444;
-  position: relative;
-  overflow: hidden;
-}
 .big-project-container {
-  flex-basis: 60%;
+  flex-basis: 50%;
   display: flex;
   box-sizing: border-box;
   height: fit-content;
@@ -460,6 +467,13 @@ h2.name {
   box-shadow: 2px 2px 2px 2px #444;
   position: relative;
   overflow: hidden;
+}
+.big-project-container:nth-child(even){
+  flex-direction: row-reverse;
+}
+.project-description {
+  width: 50%;
+  text-align: left;
 }
 .projects-name {
   color: #00bbbb;
