@@ -223,6 +223,7 @@ h2.name {
   color: #0e0e0e;
   font-weight: bold;
   z-index: 12;
+  text-align: left;
 }
 
 .about-me-text {
