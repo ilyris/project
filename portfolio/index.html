@@ -12,7 +12,8 @@
     <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oleo+Script" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:700" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
 
 
 
@@ -22,12 +23,12 @@
 
 <body class="top-node">
     <div class="container-wrapper">
-        <section class="card-1" href="#home">
+        <section id="card-1" href="#home">
             <nav class="main-nav">
                 <h2 class="name">DS</h2>
                 <ul class="main-ul">
                     <li class="main-li home">
-                        <a class="main-links" href="#">home</a>
+                        <a class="main-links" href="#card-1">home</a>
                     </li>
                     <li class="main-li resume">
                         <a class="main-links" href="#">resume</a>
@@ -40,64 +41,74 @@
             </nav>
             <! - - - End Of Navigation - - - >
             <div class="color-block"></div>
+            <div class="first-name-container">
                 <div class="first-name">Code</div>
-                <div class="last-name">Enthusiast</div>
+            </div>
+
+            <div class="last-name">Enthusiast</div>
             <div class="image-container"></div>
-            <div class="about-me-container">
-                <div class="about-me-header">About me</div>
-                <p class="about-me-text">Hi my name is<span> Dylan Sieren</span>, I am currently
-                    on the path to becomming a frontend developer. I care for elegant code, a minimalist UI and great
-                    UX. </p>
+            <div class="intro-container">
+                <div class="intro-header">About me</div>
+                <p class="intro-text">The darkest moments of our lives are not to be buried and forgotten, rather they
+                    are a memory to be called upon for inspiration to remind us of the unrelenting human spirit and our
+                    capacity to overcome the intolerable. - Vince Lombardi </p>
             </div>
             <a class="scroll-button" href="#card-2"><span></span>Scroll</a>
-            <div class="contact-link-block" data-depth="0.8">
+            <div class="contact-link-block">
                 <ul class="contact-ul">
                     <li class="contact-li">
                         <a class="contact-link" href="#">contact</a>
                     </li>
                 </ul>
             </div>
+
         </section>
         <! - - - End first section -->
         <section id="card-2">
             <div class="multi-color-bg">
-                <h2 class="card-2-title">Technical Skills</h2>
-                <p class="card-2-caption">I enjoy learning new skills and cutting edge technology that I can apply on projects at home and at work</p>
-                    <div class="skills">
-                            <div class="skill-icon"><i class="fab fa-js"></i></div>
-                        <h3 class="skill-title">JavaScript</h3>
-                    </div>
-                    <div class="skills">
-                        <div class="skill-icon"><i class="fab fa-html5"></i></div>
-                        <h3 class="skill-title">HTML5</h3>
-                    </div>
-                    <div class="skills">
-                        <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
-                        <h3 class="skill-title">CSS3</h3>
-                    </div>
-                    <div class="skills">
-                        <div class="skill-icon"><i class="fab fa-git-square"></i></div>
-                        <h3 class="skill-title">GIT</h3>
-                    </div>
-                    <div class="skills">
-                        <div class="skill-icon"><i class="fab fa-github"></i></div>
-                        <h3 class="skill-title">GitHub</h3>
-                    </div>
-                    <div class="skills">
-                            <div class="skill-icon"><i class="fab fa-drupal"></i></div>
-                            <h3 class="skill-title">Drupal</h3>
-                        </div>
+                <h2 class="card-title">Technical Skills</h2>
+                <p class=" card-2 card-description">I enjoy learning new skills and cutting edge technology that I can
+                    apply on projects at home and at work</p>
+                <div class="skills">
+                    <div class="skill-icon"><i class="fab fa-js"></i></div>
+                    <h3 class="skill-title">JavaScript</h3>
+                </div>
+                <div class="skills">
+                    <div class="skill-icon"><i class="fab fa-html5"></i></div>
+                    <h3 class="skill-title">HTML5</h3>
+                </div>
+                <div class="skills">
+                    <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
+                    <h3 class="skill-title">CSS3</h3>
+                </div>
+                <div class="skills">
+                    <div class="skill-icon"><i class="fab fa-git-square"></i></div>
+                    <h3 class="skill-title">GIT</h3>
+                </div>
+                <div class="skills">
+                    <div class="skill-icon"><i class="fab fa-github"></i></div>
+                    <h3 class="skill-title">GitHub</h3>
+                </div>
+                <div class="skills">
+                    <div class="skill-icon"><i class="fab fa-drupal"></i></div>
+                    <h3 class="skill-title">Drupal</h3>
+                </div>
 
             </div>
         </section>
         <!- - - Start of projects - - - >
         <div class="sidebar-left">
             <section class="project-cards">
-                <p class ="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates error obcaecati repudiandae sapiente maiores iste, 
-                    odit nisi eligendi quidem corporis voluptas quibusdam minus ut aliquid, consequatur sit! Ea adipisci non fugit, sunt voluptates numquam, 
-                    est dolorem placeat, ad accusamus tempore similique repellendus! Tempore provident architecto modi dolore odit consequuntur est, eveniet maxime nam facere alias 
-                    dolor commodi accusamus autem, explicabo dicta maiores veniam perferendis laboriosam ratione omnis iure sint quaerat itaque! Reiciendis est aliquam commodi delectus
-                     voluptatibus numquam, unde quae debitis id illum asperiores sit at aut enim vitae in molestiae illo facere. Quos soluta fuga, expedita tempora id illo!</p>
+                <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
+                    error obcaecati repudiandae sapiente maiores iste,
+                    odit nisi eligendi quidem corporis voluptas quibusdam minus ut aliquid, consequatur sit! Ea
+                    adipisci non fugit, sunt voluptates numquam,
+                    est dolorem placeat, ad accusamus tempore similique repellendus! Tempore provident architecto modi
+                    dolore odit consequuntur est, eveniet maxime nam facere alias
+                    dolor commodi accusamus autem, explicabo dicta maiores veniam perferendis laboriosam ratione omnis
+                    iure sint quaerat itaque! Reiciendis est aliquam commodi delectus
+                    voluptatibus numquam, unde quae debitis id illum asperiores sit at aut enim vitae in molestiae illo
+                    facere. Quos soluta fuga, expedita tempora id illo!</p>
                 <div class="small-project-container">
                     <div class="small-image-container">
                         <h4 class="projects-name">test name</h4>
@@ -106,11 +117,16 @@
                 </div>
             </section>
             <section class="project-cards">
-                    <p class ="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates error obcaecati repudiandae sapiente maiores iste, 
-                            odit nisi eligendi quidem corporis voluptas quibusdam minus ut aliquid, consequatur sit! Ea adipisci non fugit, sunt voluptates numquam, 
-                            est dolorem placeat, ad accusamus tempore similique repellendus! Tempore provident architecto modi dolore odit consequuntur est, eveniet maxime nam facere alias 
-                            dolor commodi accusamus autem, explicabo dicta maiores veniam perferendis laboriosam ratione omnis iure sint quaerat itaque! Reiciendis est aliquam commodi delectus
-                             voluptatibus numquam, unde quae debitis id illum asperiores sit at aut enim vitae in molestiae illo facere. Quos soluta fuga, expedita tempora id illo!</p>
+                <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
+                    error obcaecati repudiandae sapiente maiores iste,
+                    odit nisi eligendi quidem corporis voluptas quibusdam minus ut aliquid, consequatur sit! Ea
+                    adipisci non fugit, sunt voluptates numquam,
+                    est dolorem placeat, ad accusamus tempore similique repellendus! Tempore provident architecto modi
+                    dolore odit consequuntur est, eveniet maxime nam facere alias
+                    dolor commodi accusamus autem, explicabo dicta maiores veniam perferendis laboriosam ratione omnis
+                    iure sint quaerat itaque! Reiciendis est aliquam commodi delectus
+                    voluptatibus numquam, unde quae debitis id illum asperiores sit at aut enim vitae in molestiae illo
+                    facere. Quos soluta fuga, expedita tempora id illo!</p>
                 <div class="big-project-container">
                     <div class="big-image-container">
                         <a class="projects-hover-effect"><img src="annie10.jpg"> </a>
@@ -119,11 +135,16 @@
                 </div>
             </section>
             <section class="project-cards">
-                    <p class ="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates error obcaecati repudiandae sapiente maiores iste, 
-                            odit nisi eligendi quidem corporis voluptas quibusdam minus ut aliquid, consequatur sit! Ea adipisci non fugit, sunt voluptates numquam, 
-                            est dolorem placeat, ad accusamus tempore similique repellendus! Tempore provident architecto modi dolore odit consequuntur est, eveniet maxime nam facere alias 
-                            dolor commodi accusamus autem, explicabo dicta maiores veniam perferendis laboriosam ratione omnis iure sint quaerat itaque! Reiciendis est aliquam commodi delectus
-                             voluptatibus numquam, unde quae debitis id illum asperiores sit at aut enim vitae in molestiae illo facere. Quos soluta fuga, expedita tempora id illo!</p>
+                <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
+                    error obcaecati repudiandae sapiente maiores iste,
+                    odit nisi eligendi quidem corporis voluptas quibusdam minus ut aliquid, consequatur sit! Ea
+                    adipisci non fugit, sunt voluptates numquam,
+                    est dolorem placeat, ad accusamus tempore similique repellendus! Tempore provident architecto modi
+                    dolore odit consequuntur est, eveniet maxime nam facere alias
+                    dolor commodi accusamus autem, explicabo dicta maiores veniam perferendis laboriosam ratione omnis
+                    iure sint quaerat itaque! Reiciendis est aliquam commodi delectus
+                    voluptatibus numquam, unde quae debitis id illum asperiores sit at aut enim vitae in molestiae illo
+                    facere. Quos soluta fuga, expedita tempora id illo!</p>
                 <div class="small-project-container">
                     <div class="small-image-container">
                         <h4 class="projects-name">test name</h4>
@@ -132,14 +153,49 @@
                 </div>
             </section>
         </div>
-        <!-- <section id="card-4">
+        <section id="card-4">
             <div class="card-4-container">
-                <div class="random-image"></div>
+                <div class="about-me-container">
+                    <h2 class=" card-4 card-title">About Me</h2>
+                    <P class=" card-4 card-description">Hey there, my name is Dylan Sieren. I am currently a front end
+                        developer and on the path for my associates degree in web development.
+                        In my free time I like to learn new technologies, create projects, play some computer games,
+                        and hang out with my family.
+                        Everyday I strive the be the best person I can be and work towards a better me tomorrow.
+                    </P>
+                </div>
+                <div class="contact-container">
+                    <h2 class="card-4 card-title">Get Ahold Of Me</h2>
+                    <ul class="card-4-ul">
+                        <li><i class="fas fa-phone fa-flip-horizontal"></i>
+                            <span class="phone-number">Phone: 1(608)481-9161</span>
+                        </li>
+                        <li><i class="fas fa-envelope"></i>
+                            <a class="email" href="mailto:dylan.sieren01@gmail.com">Email address:
+                                dylan.sieren01@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </section> -->
+        </section>
+        <footer class="main-footer">
+            <ul class="footer-links">
+                <li><a href="#card-1">Home</a></li>
+                <li><a href="resume">Resume</a></li>
+                <li><a href="about">About</a></li>
+            </ul>
+            <ul class ="company-icons">
+                <li><a href="https://github.com">
+                    <div class="icon-container"><i class="fab fa-github"></i></div></a></li>
+                <li><a href="https://codepen.io"><div class="icon-container"><i class="fab fa-codepen"></i></div></a></li>
+                <li>
+                    <a class="email" href="mailto:dylan.sieren01@gmail.com"><div class="icon-container"><i class="fas fa-envelope"></i></div></a>
+                </li>
+            </ul>
+            <div class="copyright"><P>&#169 2018 Dylan Sieren</P></div>
+        </footer>
     </div>
     <script src="primary.js"></script>
-    <!-- <script src="main.js"></script> -->
 </body>
 
 </html>

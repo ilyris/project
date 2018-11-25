@@ -30,9 +30,9 @@ const windowScroll = () => {
   const scrolled = document.documentElement.scrollTop;
   //allows these three different elelements to be moved with the window scroll at different speeds.
 
-    document.querySelector('.about-me-container').style.top = 0 - scrolled * .25 + "px";
+    document.querySelector('.intro-container').style.top = 0 - scrolled * .25 + "px";
     document.querySelector('.first-name').style.top = 0 - scrolled * .20 + "px";
-    document.querySelector('.last-name').style.top = 350 - scrolled * .10 + "px";
+    document.querySelector('.last-name').style.top = 400 - scrolled * .10 + "px";
     document.querySelector('.image-container').style.top = 0 - scrolled * .05 + "px";
     document.querySelector('.contact-link-block').style.top = 0 + scrolled * .05 + "px";
 };
@@ -46,7 +46,7 @@ document.querySelector(".main-ul").classList.toggle("on");
 }
 
 // storing the card-1 element into a variable to use in a mousemove function
-const parallaxContainer = document.querySelector('.card-1');
+const parallaxContainer = document.querySelector('#card-1');
   //create a function and attach an eventlister that listens for mouse movement
 parallaxContainer.addEventListener ("mousemove", function(e) {
   //storing the windows outer width into a variable so we can use it in our mousemove function
@@ -55,8 +55,8 @@ parallaxContainer.addEventListener ("mousemove", function(e) {
   let screenHeight = window.outerHeight;
   // allows the image-container element to move with the mouse
   document.querySelector(".image-container").style.transform = 'translate(-' + e.pageX/screenWidth * 10 + 'px, -' + e.pageY/screenHeight * 10 + "px)";
-  document.querySelector(".first-name").style.transform = "translate(" + e.pageX/screenWidth * 15 + "px, " + e.pageY/screenHeight * 15 + "px)";
+  document.querySelector(".first-name-container").style.transform = "translate(" + e.pageX/screenWidth * 15 + "px, " + e.pageY/screenHeight * 15 + "px)";
   document.querySelector(".last-name").style.transform = "translate(" + e.pageX/screenWidth * 15 + "px, " + e.pageY/screenHeight * 15 + "px)";
-  document.querySelector(".about-me-container").style.transform = "translate(" + e.pageX/screenWidth * 15 + "px, " + e.pageY/screenHeight * 15 + "px)";
+  document.querySelector(".intro-container").style.transform = "translate(" + e.pageX/screenWidth * 15 + "px, " + e.pageY/screenHeight * 15 + "px)";
   document.querySelector(".contact-link-block").style.transform = "translate(" + e.pageX/screenWidth * 15 + "px, " + e.pageY/screenHeight * 15 + "px)";
 });
