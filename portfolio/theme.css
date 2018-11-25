@@ -441,7 +441,7 @@ h2.name {
 .card-4.card-description {
   width: 50%;
   margin: 0 auto;
-  padding: 20px;
+  padding-bottom: 20px;
   text-align: left;
 }
 
@@ -623,10 +623,15 @@ a.projects-hover-effect:hover {
 .card-4-ul {
   display: flex;
   flex-flow: column;
+  padding: 0;
+  margin: 0;
 }
 .card-4-ul li {
   list-style-type: none;
   padding: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
 }
 .phone-number,
 .email {
@@ -705,6 +710,9 @@ a.projects-hover-effect:hover {
 .icon-container:hover i {
   color: #42a5f5;
 }
+
+
+
 .copyright {
   color: #fff;
   width: 50%;
