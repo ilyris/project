@@ -70,6 +70,7 @@
 
 li.main-li {
   padding: 0 25px;
+  width: 100px;
 }
 
 .main-li.home {
@@ -94,6 +95,9 @@ a.main-links {
   text-decoration: none;
   padding: 0;
   transition: all ease-in-out 300ms;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 a.main-links:hover {
@@ -711,7 +715,9 @@ a.projects-hover-effect:hover {
   color: #42a5f5;
 }
 
-
+.footer-links li a i {
+  padding-right: 10px;
+}
 
 .copyright {
   color: #fff;
