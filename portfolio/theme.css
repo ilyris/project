@@ -516,7 +516,21 @@ h2.name {
 
 .project-description {
   width: 50%;
-  text-align: left;
+  position: relative;
+    padding: 20px;
+    text-align: left;
+    font-size: 20px;
+    color: #040404;
+    box-sizing: border-box;
+    margin: 20px 0;
+    align-self: center;
+    background: #fff;
+    transform: translateX(25%);
+    z-index: 1;
+    box-shadow: 2px 25px 30px -30px;
+}
+section.project-cards:nth-child(even) .project-description {
+  transform: translateX(-25%);
 }
 
 .projects-name {
