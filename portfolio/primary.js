@@ -79,11 +79,3 @@ parallaxContainer.addEventListener ("mousemove", function(e) {
   document.querySelector(".intro-container").style.transform = "translate(" + e.pageX/screenWidth * 15 + "px, " + e.pageY/screenHeight * 15 + "px)";
   document.querySelector(".contact-link-block").style.transform = "translate(" + e.pageX/screenWidth * 15 + "px, " + e.pageY/screenHeight * 15 + "px)";
 });
-
-function homePageAnimations() {
-  
-}
-
-windowScroll.onload = () => {
-
-}
