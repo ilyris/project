@@ -32,7 +32,7 @@
   flex-wrap: wrap;
   background: #e3e6eb;
 }
- #card-2 {
+#card-2 {
   padding-bottom: 100px;
 }
 
@@ -194,22 +194,24 @@ h2.name {
 .image-container {
   background: url(DylanS.jpg);
   width: 100%;
-  grid-column: 3/6;
+  grid-column: 3/5;
   grid-row: 3/6;
   position: relative;
   min-width: 500px;
   height: 400px;
   background-position: 50% 15%;
+  background-size: 100%;
 }
 
-.first-name-container {
+.code-word-container {
   grid-row: 1/4;
   grid-column: 1/4;
   align-self: center;
   justify-self: center;
+  animation: fade-in-opacity 1.8s ease 300ms;
 }
 
-.first-name {
+.code-word {
   font-size: 11em;
   color: #000;
   font-family: "Anton", sans-serif;
@@ -224,6 +226,7 @@ h2.name {
   color: #42a5f5;
   font-family: "Anton", sans-serif;
   left: 10%;
+  animation: slide-in-from-left 1s ease 500ms;
 }
 
 .intro-container {
@@ -440,7 +443,6 @@ h2.name {
   margin: 20px 0;
   width: 100%;
   text-align: center;
-
 }
 .card-4.card-description {
   width: 50%;
@@ -476,6 +478,7 @@ h2.name {
   box-sizing: border-box;
   height: fit-content;
   justify-content: flex-start;
+  visibility: hidden;
 }
 
 .small-image-container {
@@ -497,6 +500,7 @@ h2.name {
   box-sizing: border-box;
   height: fit-content;
   order: 2;
+  visibility: hidden;
 }
 
 .big-image-container {
@@ -515,22 +519,19 @@ h2.name {
 }
 
 .project-description {
+  visibility: hidden;
   width: 50%;
   position: relative;
-    padding: 20px;
-    text-align: left;
-    font-size: 20px;
-    color: #040404;
-    box-sizing: border-box;
-    margin: 20px 0;
-    align-self: center;
-    background: #fff;
-    transform: translateX(25%);
-    z-index: 1;
-    box-shadow: 2px 25px 30px -30px;
-}
-section.project-cards:nth-child(even) .project-description {
-  transform: translateX(-25%);
+  padding: 20px;
+  text-align: left;
+  font-size: 20px;
+  color: #040404;
+  box-sizing: border-box;
+  margin: 20px 0;
+  align-self: center;
+  background: #cccccc;
+  z-index: 1;
+  box-shadow: 2px 25px 30px -30px;
 }
 
 .projects-name {
@@ -568,6 +569,14 @@ a.projects-hover-effect:hover {
 
 .fall-in-animation {
   animation: fall-from-top 1s ease-in-out 0s 1;
+  visibility: visible;
+}
+.slide-in-from-left {
+  animation: slide-in-from-left 1.8s ease-in-out 0s;
+  visibility: visible;
+}
+.slide-in-from-right {
+  animation: slide-in-from-right 2s ease-in-out 0s;
   visibility: visible;
 }
 
@@ -723,7 +732,7 @@ a.projects-hover-effect:hover {
   transition: all ease 300ms;
 }
 .icon-container:hover {
-  background-color:black;
+  background-color: black;
 }
 .icon-container:hover i {
   color: #42a5f5;
