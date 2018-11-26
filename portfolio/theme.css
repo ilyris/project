@@ -1,17 +1,3 @@
-@font-face {
-  font-family: "FontAwesome";
-  src: url("../fonts/fontawesome-webfont.eot?v=4.7.0");
-  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0")
-      format("embedded-opentype"),
-    url("../fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"),
-    url("../fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"),
-    url("../fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"),
-    url("../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular")
-      format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
 .top-node {
   background: #fff;
   color: #666;
@@ -182,7 +168,7 @@ a.main-links:hover:after {
 
 h2.name {
   flex-basis: 100%;
-  font-family: "Oleo Script", cursive;
+  font-family: "kreon", cursive;
   padding-left: 20px;
   letter-spacing: 1px;
   font-size: 30px;
@@ -563,13 +549,13 @@ a.projects-hover-effect:hover {
 }
 
 .scrolled-nav-background {
-  background: #fff;
-  transition: background 300ms ease-in-out;
+  background: #ffffff4d;
+  transition: all 300ms ease-in-out;
   box-shadow: 0px 0px 5px 0px #888484;
 }
 
 .fall-in-animation {
-  animation: fall-from-top 1s ease-in-out 0s 1s;
+  animation: fall-from-top 2s ease 0s;
   visibility: visible;
 }
 .slide-in-from-left {
@@ -586,6 +572,10 @@ a.projects-hover-effect:hover {
 }
 .fade-in-opacity-2 {
   animation: fade-in-opacity 3s ease 500ms;
+  visibility: visible;
+}
+.rise-from-bottom {
+  animation: rise-from-bottom 1s ease-in-out 700ms;
   visibility: visible;
 }
 
@@ -669,12 +659,15 @@ a.projects-hover-effect:hover {
   box-sizing: border-box;
   text-align: center;
 }
-.phone-number,
 .email {
   font-size: 26px;
   color: #000;
   text-decoration: none;
   transition: all ease 300ms;
+}
+.email:hover,
+.fa-envelope {
+  color: #fff;
 }
 .fa-phone,
 .fa-envelope {
@@ -808,7 +801,6 @@ a.projects-hover-effect:hover {
     opacity: 0;
     transform: translateY(200%);
   }
-
   100% {
     opacity: 1;
     transform: translateY(0%);
@@ -823,6 +815,9 @@ a.projects-hover-effect:hover {
 
   50% {
     opacity: 0.3;
+  }
+  80% {
+    transform: translateX(10%)
   }
 
   100% {
@@ -842,7 +837,7 @@ a.projects-hover-effect:hover {
   }
 
   80% {
-    opacity: 0.6;
+    transform: translateX(-10%)
   }
 
   100% {
