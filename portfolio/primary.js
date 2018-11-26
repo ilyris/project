@@ -5,13 +5,16 @@ const projectDescriptions = document.querySelectorAll(".project-description");
 const smallProjectContainers = document.querySelectorAll(".small-project-container");
 const bigProjectContainers = document.querySelector(".big-project-container");
 const projectDescriptionEven = document.querySelector(".project-cards:nth-child(even) .project-description");
-const contactMe =document.querySelector('.contact-container');
+const contactMe = document.querySelector('.card-4-container');
 
 //runs the function WindowScroll onscroll
 window.onscroll =  () => {
   windowScroll();
 };
 const windowScroll = () => {
+  const animateSkills = document.querySelectorAll(".skills");
+  const yPosition = window.pageYOffset;
+  const scrolled = document.documentElement.scrollTop;
   const mainNav = document.querySelector(".main-nav");
   //classList adds class scrolled-nav-background if the variable "MainNav" does not have that class
   mainNav.classList.toggle(
@@ -21,8 +24,7 @@ const windowScroll = () => {
   mainNav.scrollTop / screen.height > .75 || document.documentElement.scrollTop / screen.height  > .75
   );
   
-const animateSkills = document.querySelectorAll(".skills");
-const yPosition = window.pageYOffset;
+
 
 for (let i = 0; i < animateSkills.length; i++) {
   if (yPosition > 80) {
@@ -45,10 +47,12 @@ for(let i = 0; i < projectDescriptions.length; i++ ){
     }
   }
 
+  if(yPosition > 1550 && contactMe.classList.contains("hide")) {
+    contactMe.classList.add('rise-from-bottom');
+  }
+
   projectDescriptionEven.style.left = "-100px";
-  const scrolled = document.documentElement.scrollTop;
   //allows these three different elelements to be moved with the window scroll at different speeds.
-  // document.querySelector('.project-cards:nth-child(even) .project-description').style.top = 0 - scrolled * .40 + "px";
   document.querySelector('.intro-container').style.top = 0 - scrolled * .25 + "px";
   document.querySelector('.code-word').style.top = 0 - scrolled * .20 + "px";
   document.querySelector('.last-name').style.top = 400 - scrolled * .10 + "px";
@@ -57,12 +61,12 @@ for(let i = 0; i < projectDescriptions.length; i++ ){
 };
 
 document.querySelector(".toggle-mnu").addEventListener("click",toggleMenu);
-
 function toggleMenu() {
   this.classList.toggle ("toggle-active");
   document.querySelector(".main-ul").classList.toggle("on");
 }
 
+// ****** Fires mouseover Parallax effect ******//
 const parallaxContainer = document.querySelector('#card-1');
 parallaxContainer.addEventListener ("mousemove", function(e) {
   //storing the windows outer width into a variable so we can use it in our mousemove function
