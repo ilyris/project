@@ -172,6 +172,7 @@ a.main-links:hover:after {
   color: #000;
   transition: all ease-in-out 300ms;
 }
+
 .logo:hover {
   color: #0d47a1;
   padding-left: 10px;
@@ -451,7 +452,10 @@ h2.name {
   margin: 0 auto;
   padding-bottom: 20px;
   text-align: left;
+  letter-spacing: 1px;
+  line-height: 30px
 }
+
 .name {
   font-size: 26px;
   color: #0d47a1;
