@@ -72,7 +72,7 @@ parallaxContainer.addEventListener("mousemove", e => {
   cardOneButton.style.transform ="translate(" +(e.pageX / screenWidth) * 15 +"px, " +(e.pageY / screenHeight) * 15 +"px)";
 });
 
-document.querySelector(".toggle-mnu").addEventListener("click", toggleMenu);
+document.querySelector(".hamburger-menu").addEventListener("click", toggleMenu);
 function toggleMenu() {
   this.classList.toggle("toggle-active");
   document.querySelector(".main-ul").classList.toggle("on");

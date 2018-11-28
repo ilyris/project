@@ -609,36 +609,36 @@ a.projects-hover-effect:hover {
 
 /* test code */
 
-.toggle-mnu {
+.hamburger-menu {
   width: 28px;
   height: 28px;
   padding: 10px;
 }
 
-.toggle-mnu:hover {
+.hamburger-menu:hover {
   cursor: pointer;
 }
 
-.toggle-mnu span:after,
-.toggle-mnu span:before {
+.hamburger-menu span:after,
+.hamburger-menu span:before {
   content: "";
   position: absolute;
   left: 0;
   top: 9px;
 }
 
-.toggle-mnu span:after {
+.hamburger-menu span:after {
   top: 18px;
 }
 
-.toggle-mnu span {
+.hamburger-menu span {
   position: relative;
   display: block;
 }
 
-.toggle-mnu span,
-.toggle-mnu span:after,
-.toggle-mnu span:before {
+.hamburger-menu span,
+.hamburger-menu span:after,
+.hamburger-menu span:before {
   width: 28px;
   height: 3px;
   background-color: #0e0e0e;
@@ -647,15 +647,15 @@ a.projects-hover-effect:hover {
   border-radius: 2px;
 }
 
-.toggle-mnu.toggle-active span {
+.hamburger-menu.toggle-active span {
   background-color: transparent;
 }
 
-.toggle-mnu.toggle-active span:before {
+.hamburger-menu.toggle-active span:before {
   transform: rotate(400deg) translate(-1px, 0px);
 }
 
-.toggle-mnu.toggle-active span:after {
+.hamburger-menu.toggle-active span:after {
   transform: rotate(-400deg) translate(6px, -7px);
 }
 
