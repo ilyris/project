@@ -421,9 +421,7 @@ h2.name {
 }
 
 .card-title {
-  font-size: 38px;
-  border-bottom: 2px solid #90caf9;
-  border-top: 2px solid #90caf9;
+  font-size: 4em;
   width: 100%;
   display: flex;
   align-items: center;
@@ -431,12 +429,12 @@ h2.name {
   margin: 0 auto;
   text-transform: uppercase;
   padding: 10px 0;
-  color: black;
+  color: #42a5f5;
   background: rgb(227, 230, 235);
 }
 
 .card-description {
-  font-size: 22px;
+  font-size: 26px;
   color: #040404;
   font-weight: 600;
   margin: 20px 0;
@@ -445,12 +443,11 @@ h2.name {
 }
 
 .card-4.card-description {
-  width: 80%;
-  margin: 0 auto;
-  padding-bottom: 20px;
+  width: 50%;
   text-align: left;
   letter-spacing: 1px;
   line-height: 30px;
+  padding: 20px 0;
 }
 
 .name {
@@ -632,7 +629,6 @@ a.projects-hover-effect:hover {
 }
 
 #card-4 {
-  border-top: 2px solid #000;
   -webkit-animation-play-state: paused;
   -moz-animation-play-state: paused;
   -ms-animation-play-state: paused;
@@ -645,16 +641,52 @@ a.projects-hover-effect:hover {
   margin: 0  auto 150px auto;
 }
 
+.about-me-image {
+  background: url(DylanS.jpg);
+  background-size: 160%;
+  height: 300px;
+  min-width: 300px;
+  border-radius: 200px;
+  background-position-x: 47%;
+  background-position-y: 10%;
+  box-sizing: border-box;
+  margin-right: 15px;
+}
+.about-me-image-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about-me-description-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
 .card-4-container {
   display: flex;
-  box-shadow: 0px 50px 60px -50px #7171714d;
+  box-shadow: 0px 50px 60px -50px #585858;
   opacity: 0;
+  flex-flow: row wrap;
+}
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
 }
 
 .contact-container,
 .about-me-container {
-  width: 50%;
+  width: 100%;
   box-sizing: border-box;
+}
+.contact-container .card-description {
+  width: 100%;
+  text-align: center;
 }
 
 
