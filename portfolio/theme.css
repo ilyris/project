@@ -445,8 +445,8 @@ h2.name {
 .card-4.card-description {
   width: 50%;
   text-align: left;
-  letter-spacing: 1px;
-  line-height: 30px;
+  letter-spacing: 2px;
+  line-height: 40px;
   padding: 20px 0;
 }
 
