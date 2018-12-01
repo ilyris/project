@@ -9,7 +9,9 @@
   scroll-behavior: smooth;
 }
 
-#card-2, .sidebar-left, #card-4 {
+#card-2, 
+.sidebar-left, 
+#card-4 {
   margin-bottom: 150px;
 }
 
@@ -459,7 +461,7 @@ h2.name {
 /* Start of Card3 / projects */
 .sidebar-left {
   width: 90%;
-  margin: 0 auto;
+  margin: 0 auto 150px auto;
   background: #e3e6eb;
   padding: 10px 10px 100px 10px;
   box-sizing: border-box;
@@ -640,7 +642,7 @@ a.projects-hover-effect:hover {
   padding: 20px;
   width: 80%;
   box-sizing: border-box;
-  margin: 0 auto;
+  margin: 0  auto 150px auto;
 }
 
 .card-4-container {
