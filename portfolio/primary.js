@@ -35,20 +35,20 @@ const windowScroll = () => {
     }
   }
   for (let i = 0; i < projectDescriptions.length; i++) {
-    if (yPosition > 900) {
+    if (yPosition > 750) {
       projectDescriptions[i].classList.add("slide-in-from-left");
       projectDescriptions[i].style.left = "100px";
     }
   }
   for (let i = 0; i < smallProjectContainers.length; i++) {
-    if (yPosition > 900) {
+    if (yPosition > 750) {
       smallProjectContainers[i].classList.add("slide-in-from-right");
       bigProjectContainers.classList.add("slide-in-from-left");
       projectDescriptionEven.classList.add("slide-in-from-right");
     }
   }
-  if (yPosition > 1550 && contactMe.classList.contains("hide")) {
-    contactMe.classList.add("rise-from-bottom");
+  if (yPosition > 1475 && contactMe.classList.contains("hide")) {
+    contactMe.classList.add("fast-fall-from-top");
   }
   projectDescriptionEven.style.left = "-100px";
   //allows these three different elelements to be moved with the window scroll at different speeds.

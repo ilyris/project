@@ -8,10 +8,11 @@
   height: 100%;
   scroll-behavior: smooth;
 }
-/* test */
-.hide {
-  visibility: hidden;
+
+#card-2, .sidebar-left, #card-4 {
+  margin-bottom: 150px;
 }
+
 
 .container-wrapper {
   display: flex;
@@ -327,7 +328,7 @@ h2.name {
 }
 
 .skills:hover .skill-title {
-  color: #fff;
+  color: #0d47a1;
 }
 
 .random-image {
@@ -360,17 +361,11 @@ h2.name {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: #b7b6b6;
-  min-width: 225px;
-  height: 300px;
   margin: 10px;
   box-sizing: border-box;
   flex-basis: 15%;
   transition: all ease 300ms;
-}
-
-.skills:hover {
-  background: #90caf9;
+  min-width: 100px;
 }
 
 .skills:hover .fa-js {
@@ -394,7 +389,7 @@ h2.name {
 }
 
 .skills:hover .fa-github {
-  color: #000;
+  color: rgb(184, 184, 184);
 }
 
 .skill-title {
@@ -448,12 +443,12 @@ h2.name {
 }
 
 .card-4.card-description {
-  width: 50%;
+  width: 80%;
   margin: 0 auto;
   padding-bottom: 20px;
   text-align: left;
   letter-spacing: 1px;
-  line-height: 30px
+  line-height: 30px;
 }
 
 .name {
@@ -577,37 +572,12 @@ a.projects-hover-effect:hover {
   box-shadow: 0px 0px 5px 0px #888484;
 }
 
-.fall-in-animation {
-  animation: fall-from-top 2s ease 0s;
-  visibility: visible;
-}
 
-.slide-in-from-left {
-  animation: slide-in-from-left 1.8s ease-in-out 0s;
+.fast-fall-from-top {
+  animation: fast-fall-from-top 500ms ease-in-out 700ms;
   visibility: visible;
+  animation-fill-mode: forwards;
 }
-
-.slide-in-from-right {
-  animation: slide-in-from-right 2s ease-in-out 0s;
-  visibility: visible;
-}
-
-.fade-in-opacity {
-  animation: fade-in-opacity 2s ease 500ms;
-  visibility: visible;
-}
-
-.fade-in-opacity-2 {
-  animation: fade-in-opacity 3s ease 500ms;
-  visibility: visible;
-}
-
-.rise-from-bottom {
-  animation: rise-from-bottom 1s ease-in-out 700ms;
-  visibility: visible;
-}
-
-/* test code */
 
 .hamburger-menu {
   width: 28px;
@@ -660,18 +630,23 @@ a.projects-hover-effect:hover {
 }
 
 #card-4 {
-  background: #90caf9;
   border-top: 2px solid #000;
   -webkit-animation-play-state: paused;
   -moz-animation-play-state: paused;
   -ms-animation-play-state: paused;
   -o-animation-play-state: paused;
   animation-play-state: paused;
+  transform: translateY(-10%);
+  padding: 20px;
+  width: 80%;
+  box-sizing: border-box;
+  margin: 0 auto;
 }
 
 .card-4-container {
   display: flex;
-  visibility: hidden;
+  box-shadow: 0px 50px 60px -50px #7171714d;
+  opacity: 0;
 }
 
 .contact-container,
@@ -680,9 +655,7 @@ a.projects-hover-effect:hover {
   box-sizing: border-box;
 }
 
-.about-me-container {
-  border-right: solid 2px #000;
-}
+
 
 .card-4-ul {
   display: flex;
@@ -724,14 +697,14 @@ a.projects-hover-effect:hover {
 }
 
 .main-footer {
-  background: #0d47a1;
+  background: rgb(70, 70, 70);
   width: 100%;
   display: flex;
   padding: 10px;
 }
 
 .main-footer .footer-links {
-  width: 25%;
+  width: 17%;
 }
 
 .main-footer .footer-links li {
@@ -761,7 +734,7 @@ a.projects-hover-effect:hover {
 }
 
 .main-footer .company-icons {
-  width: 50%;
+  width: 33%;
   display: flex;
   justify-content: flex-end;
   align-self: flex-end;
@@ -811,7 +784,7 @@ a.projects-hover-effect:hover {
 }
 
 
-/* Animations */
+/* Animations Classes */
 .fall-in-animation {
   animation: fall-from-top 2s ease 0s;
   visibility: visible;
@@ -860,7 +833,6 @@ a.projects-hover-effect:hover {
 }
 
 /* ******KEYFRAMES**** */
-
 @keyframes fall-from-top {
   0% {
     opacity: 0;
@@ -906,7 +878,6 @@ a.projects-hover-effect:hover {
     opacity: 0;
     transform: translateY(200%);
   }
-
   100% {
     opacity: 1;
     transform: translateY(0%);
@@ -960,5 +931,15 @@ a.projects-hover-effect:hover {
 
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes fast-fall-from-top {
+  0%{
+    transform:translateY(-25px);
+  }
+  100%{
+    opacity:1;
+    transform:translateY(0px);
   }
 }
