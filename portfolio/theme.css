@@ -219,7 +219,7 @@ h2.name {
   color: #42a5f5;
   font-family: "Anton", sans-serif;
   left: 10%;
-  animation: slide-in-from-left 1.8s ease-in-out 0s;
+  animation: bounceInRight 1.8s ease-in-out 0s;
 }
 
 .intro-container {
@@ -478,7 +478,6 @@ h2.name {
   box-sizing: border-box;
   height: fit-content;
   justify-content: flex-start;
-  visibility: hidden;
 }
 
 .small-image-container {
@@ -500,7 +499,6 @@ h2.name {
   box-sizing: border-box;
   height: fit-content;
   order: 2;
-  visibility: hidden;
 }
 
 .big-image-container {
@@ -519,7 +517,6 @@ h2.name {
 }
 
 .project-description {
-  visibility: hidden;
   width: 50%;
   position: relative;
   padding: 20px;
@@ -667,6 +664,7 @@ a.projects-hover-effect:hover {
   box-shadow: 0px 10px 20px -5px #bebebe;
   opacity: 0;
   flex-flow: row wrap;
+
 }
 .contact-container {
   display: flex;
@@ -965,11 +963,15 @@ a.projects-hover-effect:hover {
 }
 
 @keyframes fast-fall-from-top {
-  0%{
-    transform:translateY(-25px);
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
   }
-  100%{
-    opacity:1;
-    transform:translateY(0px);
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
 }

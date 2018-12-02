@@ -9,6 +9,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "animate.css": "^3.7.0",
     "parallax.js": "^0.1.0"
   }
 }

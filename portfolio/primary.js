@@ -36,19 +36,19 @@ const windowScroll = () => {
   }
   for (let i = 0; i < projectDescriptions.length; i++) {
     if (yPosition > 750) {
-      projectDescriptions[i].classList.add("slide-in-from-left");
+      projectDescriptions[i].classList.add("rotateInUpLeft");
       projectDescriptions[i].style.left = "100px";
     }
   }
   for (let i = 0; i < smallProjectContainers.length; i++) {
     if (yPosition > 750) {
-      smallProjectContainers[i].classList.add("slide-in-from-right");
-      bigProjectContainers.classList.add("slide-in-from-left");
-      projectDescriptionEven.classList.add("slide-in-from-right");
+      smallProjectContainers[i].classList.add("rotateInUpRight");
+      bigProjectContainers.classList.add("rotateInUpLeft");
+      projectDescriptionEven.classList.add("rotateInUpRight");
     }
   }
-  if (yPosition > 1475 && contactMe.classList.contains("hide")) {
-    contactMe.classList.add("fast-fall-from-top");
+  if (yPosition > 2000) {
+    contactMe.classList.add("fadeInUp");
   }
   projectDescriptionEven.style.left = "-100px";
   //allows these three different elelements to be moved with the window scroll at different speeds.
@@ -59,18 +59,18 @@ const windowScroll = () => {
   cardOneButton.style.top =0 + scrolled * 0.05 + "px";
 };
 
-// ****** Fires mouseover Parallax effect ******//
-parallaxContainer.addEventListener("mousemove", e => {
-  let screenWidth = window.outerWidth;
-  let screenHeight = window.outerHeight;
+// // ****** Fires mouseover Parallax effect ******//
+// parallaxContainer.addEventListener("mousemove", e => {
+//   let screenWidth = window.outerWidth;
+//   let screenHeight = window.outerHeight;
 
-  // Elements move based on cursor movement
-  cardOneImage.style.transform ="translate(-" +(e.pageX / screenWidth) * 10 +"px, -" +(e.pageY / screenHeight) * 10 +"px)";
-  firstLargeCardOneWordContainer.style.transform ="translate(" +(e.pageX / screenWidth) * 15 +"px, " +(e.pageY / screenHeight) * 15 +"px)";
-  secondLargeCardOneWord.style.transform ="translate(" +(e.pageX / screenWidth) * 15 +"px, " +(e.pageY / screenHeight) * 15 +"px)";
-  hook.style.transform ="translate(" +(e.pageX / screenWidth) * 15 +"px, " +(e.pageY / screenHeight) * 15 +"px)";
-  cardOneButton.style.transform ="translate(" +(e.pageX / screenWidth) * 15 +"px, " +(e.pageY / screenHeight) * 15 +"px)";
-});
+//   // Elements move based on cursor movement
+//   cardOneImage.style.transform ="translate(-" +(e.pageX / screenWidth) * 10 +"px, -" +(e.pageY / screenHeight) * 10 +"px)";
+//   firstLargeCardOneWordContainer.style.transform ="translate(" +(e.pageX / screenWidth) * 15 +"px, " +(e.pageY / screenHeight) * 15 +"px)";
+//   secondLargeCardOneWord.style.transform ="translate(" +(e.pageX / screenWidth) * 15 +"px, " +(e.pageY / screenHeight) * 15 +"px)";
+//   hook.style.transform ="translate(" +(e.pageX / screenWidth) * 15 +"px, " +(e.pageY / screenHeight) * 15 +"px)";
+//   cardOneButton.style.transform ="translate(" +(e.pageX / screenWidth) * 15 +"px, " +(e.pageY / screenHeight) * 15 +"px)";
+// });
 
 document.querySelector(".hamburger-menu").addEventListener("click", toggleMenu);
 function toggleMenu() {
