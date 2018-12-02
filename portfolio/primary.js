@@ -34,18 +34,23 @@ const windowScroll = () => {
       animateSkills[i].classList.add("fall-in-animation");
     }
   }
+  
   for (let i = 0; i < projectDescriptions.length; i++) {
-    if (yPosition > 750) {
-      projectDescriptions[i].classList.add("rotateInUpLeft");
+    if(yPosition >= 700) {
+      smallProjectContainers[0].classList.add("rotateInUpRight");
       projectDescriptions[i].style.left = "100px";
-    }
-  }
-  for (let i = 0; i < smallProjectContainers.length; i++) {
-    if (yPosition > 750) {
-      smallProjectContainers[i].classList.add("rotateInUpRight");
+      projectDescriptions[0].classList.add("rotateInUpLeft");
+  } 
+    if(yPosition >= 1200) {
       bigProjectContainers.classList.add("rotateInUpLeft");
       projectDescriptionEven.classList.add("rotateInUpRight");
-    }
+    }        
+    if (yPosition >= 1500) {
+      smallProjectContainers[1].classList.add("rotateInUpRight");
+      projectDescriptions[2].classList.add("rotateInUpLeft");
+
+  }
+
   }
   if (yPosition > 2000) {
     contactMe.classList.add("fadeInUp");
