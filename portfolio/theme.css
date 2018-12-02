@@ -478,6 +478,7 @@ h2.name {
   box-sizing: border-box;
   height: fit-content;
   justify-content: flex-start;
+  opacity: 0;
 }
 
 .small-image-container {
@@ -499,6 +500,7 @@ h2.name {
   box-sizing: border-box;
   height: fit-content;
   order: 2;
+  opacity: 0;
 }
 
 .big-image-container {
@@ -529,6 +531,7 @@ h2.name {
   background: #cccccc;
   z-index: 1;
   box-shadow: 2px 25px 30px -30px;
+  opacity: 0;
 }
 
 .projects-name {
