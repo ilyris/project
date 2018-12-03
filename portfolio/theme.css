@@ -974,7 +974,7 @@ a.projects-hover-effect:hover {
 
 /* Media Queries */
 
-@media screen and (max-width: 1320px) {
+@media screen and (max-width: 1320px) {  /* Wide */
   /* Card-1 ( Home Page ) */
   .code-word {
     font-size: 9em;
@@ -989,11 +989,82 @@ a.projects-hover-effect:hover {
   .intro-text .author-of-quote {
     font-size: 26px;
   }
+  .image-container {
+    background-position: center;
+  }
   #card-1 .scroll-button {
     width: 100%;
     height: 75px;
   }
   .contact-link-block {
-    grid-row: 6/6;
+    grid-row: 7/7;
   }
+}
+
+@media screen and (max-width: 960px) { /* medium devices -- Tablets -- */
+  .last-name {
+    font-size: 9em;
+    top: 440px;
+  }
+  .project-description {
+    font-size: 18px;
+  }
+  .card-description {
+    font-size: 20px;
+  }
+}
+
+
+@media screen and (max-width: 740px) {
+  #card-1 {
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+  }
+  .code-word-container {
+    grid-row: 3/4;
+    grid-column: 1/7;
+    z-index: 10;
+    width: 100%;
+}
+  .code-word {
+    font-size: 5em;
+    transform: none;
+}
+.last-name {
+  font-size: 6em;
+  grid-row: 4/4;
+  grid-column: 1/7;
+  position: inherit;
+}
+.intro-container {
+  display: none;
+}
+.color-block {
+  display: none;
+}
+.image-container {
+  width: 100%;
+  grid-column: 1/10;
+  grid-row: 1/9;
+  height: 100%;
+}
+#card-1 .scroll-button {
+  grid-row: 6/6;
+  grid-column: 3/5;
+  color: #fff;
+}
+.contact-link-block {
+  grid-row: 5/5;
+  grid-column: 1/6;
+}
+#card-1 .scroll-button span {
+  border: 2px solid #fff;
+}
+#card-1 .scroll-button span::before {
+  background-color: #fff;
+}
 }
