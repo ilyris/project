@@ -7,11 +7,11 @@ const projectDescriptionEven = document.querySelector(".project-cards:nth-child(
 const contactMe = document.querySelector(".card-4-container");
 const parallaxContainer = document.getElementById("card-1");
 const cardOneButton = document.querySelector(".contact-link-block");
-const cardOneImage =   document.querySelector(".image-container");
-const firstLargeCardOneWord =   document.querySelector(".code-word");
-const firstLargeCardOneWordContainer =   document.querySelector(".code-word-container");
-const secondLargeCardOneWord =   document.querySelector(".last-name");
-const hook =   document.querySelector(".intro-container");
+const cardOneImage = document.querySelector(".image-container");
+const firstLargeCardOneWord = document.querySelector(".code-word");
+const firstLargeCardOneWordContainer = document.querySelector(".code-word-container");
+const secondLargeCardOneWord = document.querySelector(".last-name");
+const hook = document.querySelector(".intro-container");
 
 
 window.onscroll = () => {
@@ -29,6 +29,7 @@ const windowScroll = () => {
     || document.documentElement.scrollTop / screen.height > 0.75
   );
 
+  // Animates the Skills section, Project section, and about me container.
   for (let i = 0; i < animateSkills.length; i++) {
     if (yPosition > 80) {
       animateSkills[i].classList.add("fall-in-animation");
@@ -36,6 +37,13 @@ const windowScroll = () => {
   }
   
   for (let i = 0; i < projectDescriptions.length; i++) {
+    projectDescriptions[0].style.top = -80 + scrolled *.04 + "px";
+    projectDescriptions[1].style.top = -110 + scrolled *.06 + "px";
+    projectDescriptions[2].style.top = -120 + scrolled *.08 + "px";
+    bigProjectContainers.style.top = -100 - scrolled * .06 + "px";
+    smallProjectContainers[0].style.top = -100 - scrolled * .05 + "px";
+    smallProjectContainers[1].style.top = -100 - scrolled * .06 + "px";
+
     if(yPosition >= 700) {
       smallProjectContainers[0].classList.add("rotateInUpRight");
       projectDescriptions[i].style.left = "100px";
@@ -56,12 +64,14 @@ const windowScroll = () => {
     contactMe.classList.add("fadeInUp");
   }
   projectDescriptionEven.style.left = "-100px";
+
   //allows these three different elelements to be moved with the window scroll at different speeds.
-  hook.style.top =0 - scrolled * 0.25 + "px";
+  hook.style.top = 0 - scrolled * 0.25 + "px";
   firstLargeCardOneWord.style.top = 0 - scrolled * 0.2 + "px";
   secondLargeCardOneWord.style.top = 400 - scrolled * 0.1 + "px";
-  cardOneImage.style.top =0 - scrolled * 0.05 + "px";
-  cardOneButton.style.top =0 + scrolled * 0.05 + "px";
+  cardOneImage.style.top = 0 - scrolled * 0.05 + "px";
+  cardOneButton.style.top = 0 + scrolled * 0.05 + "px";
+
 };
 
 // // ****** Fires mouseover Parallax effect ******//
