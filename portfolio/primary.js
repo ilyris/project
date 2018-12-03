@@ -21,6 +21,8 @@ window.onscroll = () => {
 const windowScroll = () => {
   const animateSkills = document.querySelectorAll(".skills");
   const mainNav = document.querySelector(".main-nav");
+  const logo = document.querySelector(".logo");
+  const mainLinks = document.querySelectorAll(".main-links");
   const yPosition = window.pageYOffset;
   const scrolled = document.documentElement.scrollTop;
 
@@ -28,6 +30,19 @@ const windowScroll = () => {
   mainNav.classList.toggle( "scrolled-nav-background", mainNav.scrollTop / screen.height > 0.75 
     || document.documentElement.scrollTop / screen.height > 0.75
   );
+  if(mainNav.classList.contains("scrolled-nav-background")){
+    logo.style.color ="#fff";
+    for(let i = 0; i < mainLinks.length; i++) {
+      mainLinks[i].style.color = "#fff";
+    }
+
+  } else {
+    logo.style.color = "#000";
+    for(let i = 0; i < mainLinks.length; i++) {
+      mainLinks[i].style.color = "#000";
+    }
+  }
+
 
   // Animates the Skills section, Project section, and about me container.
   for (let i = 0; i < animateSkills.length; i++) {
@@ -56,7 +71,6 @@ const windowScroll = () => {
     if (yPosition >= 1500) {
       smallProjectContainers[1].classList.add("rotateInUpRight");
       projectDescriptions[2].classList.add("rotateInUpLeft");
-
   }
 
   }

@@ -10,7 +10,7 @@
 }
 
 #card-2, 
-.sidebar-left, 
+#card-3, 
 #card-4 {
   margin-bottom: 100px;
 }
@@ -65,9 +65,11 @@ li.main-li {
 }
 
 .main-li.resume {
+  animation: rise-from-bottom 0.7s ease-in-out 0s 1;
+}
+.main-li.projects {
   animation: rise-from-bottom 0.6s ease-in-out 0s 1;
 }
-
 .main-li.about {
   animation: rise-from-bottom 0.5s ease-in-out 0s 1;
 }
@@ -452,7 +454,7 @@ h2.name {
 }
 
 /* Start of Card3 / projects */
-.sidebar-left {
+#card-3 {
   width: 90%;
   margin: 0 auto 150px auto;
   background: #e3e6eb;
@@ -562,7 +564,7 @@ a.projects-hover-effect:hover {
 }
 
 .scrolled-nav-background {
-  background: #ffffff4d;
+  background: #000;
   transition: all 300ms ease-in-out;
   box-shadow: 0px 0px 5px 0px #888484;
 }
@@ -606,7 +608,7 @@ a.projects-hover-effect:hover {
 .hamburger-menu span:before {
   width: 28px;
   height: 3px;
-  background-color: #0e0e0e;
+  background-color: #42a5f5;
   transition: all 0.3s;
   backface-visibility: hidden;
   border-radius: 2px;
