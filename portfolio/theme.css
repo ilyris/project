@@ -972,7 +972,7 @@ a.projects-hover-effect:hover {
 
 /* Media Queries */
 
-@media screen and (max-width: 1320px) {
+@media screen and (max-width: 1360px) {
   /* Wide */
   /* Card-1 ( Home Page ) */
   .code-word {
@@ -1047,7 +1047,7 @@ a.projects-hover-effect:hover {
     color: #42a5f5;
   }
 
-  .hamburger-menu {
+  #card-1 .hamburger-menu {
     display: none;
   }
   .code-word-container {
@@ -1093,32 +1093,50 @@ a.projects-hover-effect:hover {
     justify-content: space-around;
     flex-direction: column-reverse;
     margin: 0;
-}
+  }
   .project-description.animated {
     box-sizing: border-box;
     padding: 10px;
     width: 100%;
     margin: 0px;
+  }
+  .project-description {
+    font-size: 22px;
+  }
+  .about-me-description-image-container {
+    flex-direction: column;
+  }
+  p.card-4.card-description {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  .about-me-image {
+    height: 200px;
+    min-width: 200px;
+    max-width: 200px;
+  }
+  .main-footer .footer-links {
+    width: 25%;
+  }
 }
-.project-description {
-  font-size: 22px;
-}
-.about-me-description-image-container {
-  flex-direction: column;
-}
-p.card-4.card-description {
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  padding: 10px;
-  box-sizing: border-box;
-}
-.about-me-image {
-  height: 200px;
-  min-width: 50%;
-  max-width: 200px;
-}
-.main-footer .footer-links {
-  width: 25%;
-}
+
+@media screen and (max-width: 500px) {
+  .last-name {
+    font-size: 5em;
+  }
+  #card-4 {
+    width: 100%;
+  }
+  .icon-container {
+    padding: 5px;
+  }
+  .main-footer .footer-links li a {
+    white-space: nowrap;
+  }
+  .fa-github, .fa-envelope, .fa-codepen {
+    font-size: 24px;
+  }
 }
