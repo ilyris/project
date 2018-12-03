@@ -730,7 +730,7 @@ a.projects-hover-effect:hover {
 }
 
 .main-footer {
-  background: rgb(70, 70, 70);
+  background: #000;
   width: 100%;
   display: flex;
   padding: 10px;
@@ -783,7 +783,7 @@ a.projects-hover-effect:hover {
 }
 
 .icon-container {
-  border: 2px solid #000;
+  border: 2px solid #fff;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -793,11 +793,11 @@ a.projects-hover-effect:hover {
 }
 
 .icon-container:hover {
-  background-color: black;
+  background-color: #fff;
 }
 
 .icon-container:hover i {
-  color: #42a5f5;
+  color: #0d47a1;
 }
 
 .footer-links li a i {
