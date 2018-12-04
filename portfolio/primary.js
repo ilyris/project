@@ -11,12 +11,30 @@ const firstLargeCardOneWord = document.querySelector(".code-word");
 const firstLargeCardOneWordContainer = document.querySelector(".code-word-container");
 const secondLargeCardOneWord = document.querySelector(".last-name");
 const hook = document.querySelector(".intro-container");
-const xPosition = window.innerWidth;
+let screenWidth = window.outerWidth;
 
 document.querySelector(".hamburger-menu").addEventListener("click", toggleMenu);
 function toggleMenu() {
   this.classList.toggle("toggle-active");
   document.querySelector(".main-ul").classList.toggle("on");
+}
+
+for(let i = 0; i < projectDescriptions.length; i++) {
+  projectDescriptions[i].style.left = "100px";
+  projectDescriptionEven.style.left = "-100px";
+}
+
+window.onresize = () => {
+  windowResize();
+}
+
+const windowResize = ()=> {
+  for(let i = 0; i < projectDescriptions.length; i++) {
+    if(window.outerWidth < 500){
+      projectDescriptions[i].style.left ="auto";
+      console.log('i fired');
+    }
+  }
 }
 
 window.onscroll = () => {
@@ -30,6 +48,12 @@ const windowScroll = () => {
   const mainLinks = document.querySelectorAll(".main-links");
   const yPosition = window.pageYOffset;
   const scrolled = document.documentElement.scrollTop;
+ 
+
+  if(window.width <= 500) {
+    console.log('i finally executed');
+   }
+
 
   // Scroll Parallax for my projects
   for (let i = 0; i < projectDescriptions.length; i++) {
@@ -74,14 +98,15 @@ const windowScroll = () => {
   for (let i = 0; i < projectDescriptions.length; i++) {
     if (yPosition >= 700) {
       smallProjectContainers[0].classList.add("rotateInUpRight");
-      projectDescriptions[i].style.left = "100px";
+      // projectDescriptions[i].style.left = "100px";
       projectDescriptions[0].classList.add("rotateInUpLeft");
+      console.log('but i ran');
     }
-    if (yPosition >= 1200) {
+    if (yPosition >= 1200 ) {
       bigProjectContainers.classList.add("rotateInUpLeft");
       projectDescriptionEven.classList.add("rotateInUpRight");
     }
-    if (yPosition >= 1500) {
+    if (yPosition >= 1500 ) {
       smallProjectContainers[1].classList.add("rotateInUpRight");
       projectDescriptions[2].classList.add("rotateInUpLeft");
     }
@@ -90,12 +115,12 @@ const windowScroll = () => {
   if (yPosition > 2000) {
     contactMe.classList.add("fadeInUp");
   }
-  projectDescriptionEven.style.left = "-100px";
+  // projectDescriptionEven.style.left = "-100px";
 };
 
 // // ****** Fires mouseover Parallax effect ******//
 // parallaxContainer.addEventListener("mousemove", e => {
-//   let screenWidth = window.outerWidth;
+  // let screenWidth = window.outerWidth;
 //   let screenHeight = window.outerHeight;
 
 //   // Elements move based on cursor movement

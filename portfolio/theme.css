@@ -87,9 +87,6 @@ a.main-links {
   justify-content: space-between;
 }
 
-a.main-links:hover {
-}
-
 a.main-links::before,
 a::after {
   content: "";
@@ -476,7 +473,7 @@ h2.name {
   box-sizing: border-box;
   height: fit-content;
   justify-content: flex-start;
-  opacity: 0;
+   opacity: 0; 
 }
 
 .small-image-container {
@@ -498,7 +495,7 @@ h2.name {
   box-sizing: border-box;
   height: fit-content;
   order: 2;
-  opacity: 0;
+   opacity: 0; 
 }
 
 .big-image-container {
@@ -529,7 +526,7 @@ h2.name {
   background: rgb(227, 230, 235);
   z-index: 1;
   box-shadow: 2px 25px 30px -30px;
-  opacity: 0;
+  opacity: 0; 
 }
 
 .projects-name {
@@ -973,7 +970,6 @@ a.projects-hover-effect:hover {
 /* Media Queries */
 
 @media screen and (max-width: 1360px) {
-  /* Wide */
   /* Card-1 ( Home Page ) */
   .code-word {
     font-size: 9em;
@@ -1126,6 +1122,11 @@ a.projects-hover-effect:hover {
 @media screen and (max-width: 500px) {
   .last-name {
     font-size: 5em;
+  }
+  .project-description,
+  .small-project-container,
+  .big-project-container{
+    opacity: 1;
   }
   #card-4 {
     width: 100%;
