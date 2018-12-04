@@ -18,21 +18,29 @@ function toggleMenu() {
   this.classList.toggle("toggle-active");
   document.querySelector(".main-ul").classList.toggle("on");
 }
-
-
-  if(window.outerWidth > 500 ) {
-      for(let i = 0; i < projectDescriptions.length; i++) {
-        projectDescriptions[i].style.left = "100px";
-        projectDescriptionEven.style.left = "-100px";
-        console.log(window.otherWidth);
+// Create function to check the screens width
+const checkScreenWidth = () => {
+  if (window.outerWidth > 500) {
+    for (let i = 0; i < projectDescriptions.length; i++) {
+      projectDescriptions[i].style.left = "100px";
+      projectDescriptionEven.style.left = "-100px";
     }
   } else if (window.outerWidth < 500) {
-    for(let i = 0; i < projectDescriptions.length; i++) {
+    for (let i = 0; i < projectDescriptions.length; i++) {
       projectDescriptions[i].style.left = "auto";
       projectDescriptionEven.style.left = "auto";
     }
   }
+};
 
+checkScreenWidth();
+
+window.onresize = () => {
+  windowResize();
+};
+const windowResize = () => {
+  checkScreenWidth();
+};
 
 window.onscroll = () => {
   windowScroll();
@@ -45,12 +53,10 @@ const windowScroll = () => {
   const mainLinks = document.querySelectorAll(".main-links");
   const yPosition = window.pageYOffset;
   const scrolled = document.documentElement.scrollTop;
- 
 
-  if(window.width <= 500) {
-    console.log('i finally executed');
-   }
-
+  if (window.width <= 500) {
+    console.log("i finally executed");
+  }
 
   // Scroll Parallax for my projects
   for (let i = 0; i < projectDescriptions.length; i++) {
@@ -96,13 +102,13 @@ const windowScroll = () => {
     if (yPosition >= 700) {
       smallProjectContainers[0].classList.add("rotateInUpRight");
       projectDescriptions[0].classList.add("rotateInUpLeft");
-      console.log('but i ran');
+      console.log("but i ran");
     }
-    if (yPosition >= 1200 ) {
+    if (yPosition >= 1200) {
       bigProjectContainers.classList.add("rotateInUpLeft");
       projectDescriptionEven.classList.add("rotateInUpRight");
     }
-    if (yPosition >= 1500 ) {
+    if (yPosition >= 1500) {
       smallProjectContainers[1].classList.add("rotateInUpRight");
       projectDescriptions[2].classList.add("rotateInUpLeft");
     }
@@ -115,7 +121,7 @@ const windowScroll = () => {
 
 // // ****** Fires mouseover Parallax effect ******//
 // parallaxContainer.addEventListener("mousemove", e => {
-  // let screenWidth = window.outerWidth;
+// let screenWidth = window.outerWidth;
 //   let screenHeight = window.outerHeight;
 
 //   // Elements move based on cursor movement
