@@ -20,12 +20,12 @@ function toggleMenu() {
 }
 // Create function to check the screens width
 const checkScreenWidth = () => {
-  if (window.outerWidth > 500) {
+  if (window.outerWidth > 740) {
     for (let i = 0; i < projectDescriptions.length; i++) {
       projectDescriptions[i].style.left = "100px";
       projectDescriptionEven.style.left = "-100px";
     }
-  } else if (window.outerWidth < 500) {
+  } else if (window.outerWidth < 740) {
     for (let i = 0; i < projectDescriptions.length; i++) {
       projectDescriptions[i].style.left = "auto";
       projectDescriptionEven.style.left = "auto";
