@@ -19,23 +19,20 @@ function toggleMenu() {
   document.querySelector(".main-ul").classList.toggle("on");
 }
 
-for(let i = 0; i < projectDescriptions.length; i++) {
-  projectDescriptions[i].style.left = "100px";
-  projectDescriptionEven.style.left = "-100px";
-}
 
-window.onresize = () => {
-  windowResize();
-}
-
-const windowResize = ()=> {
-  for(let i = 0; i < projectDescriptions.length; i++) {
-    if(window.outerWidth < 500){
-      projectDescriptions[i].style.left ="auto";
-      console.log('i fired');
+  if(window.outerWidth > 500 ) {
+      for(let i = 0; i < projectDescriptions.length; i++) {
+        projectDescriptions[i].style.left = "100px";
+        projectDescriptionEven.style.left = "-100px";
+        console.log(window.otherWidth);
+    }
+  } else if (window.outerWidth < 500) {
+    for(let i = 0; i < projectDescriptions.length; i++) {
+      projectDescriptions[i].style.left = "auto";
+      projectDescriptionEven.style.left = "auto";
     }
   }
-}
+
 
 window.onscroll = () => {
   windowScroll();
@@ -98,7 +95,6 @@ const windowScroll = () => {
   for (let i = 0; i < projectDescriptions.length; i++) {
     if (yPosition >= 700) {
       smallProjectContainers[0].classList.add("rotateInUpRight");
-      // projectDescriptions[i].style.left = "100px";
       projectDescriptions[0].classList.add("rotateInUpLeft");
       console.log('but i ran');
     }
@@ -115,7 +111,6 @@ const windowScroll = () => {
   if (yPosition > 2000) {
     contactMe.classList.add("fadeInUp");
   }
-  // projectDescriptionEven.style.left = "-100px";
 };
 
 // // ****** Fires mouseover Parallax effect ******//
