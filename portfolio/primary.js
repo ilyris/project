@@ -11,13 +11,13 @@ const firstLargeCardOneWord = document.querySelector(".code-word");
 const firstLargeCardOneWordContainer = document.querySelector(".code-word-container");
 const secondLargeCardOneWord = document.querySelector(".last-name");
 const hook = document.querySelector(".intro-container");
-let screenWidth = window.outerWidth;
 
 document.querySelector(".hamburger-menu").addEventListener("click", toggleMenu);
 function toggleMenu() {
   this.classList.toggle("toggle-active");
   document.querySelector(".main-ul").classList.toggle("on");
 }
+
 // Create function to check the screens width
 const checkScreenWidth = () => {
   if (window.outerWidth > 740) {
@@ -47,16 +47,12 @@ window.onscroll = () => {
 };
 
 const windowScroll = () => {
-  const animateSkills = document.querySelectorAll(".skills");
   const mainNav = document.querySelector(".main-nav");
   const logo = document.querySelector(".logo");
   const mainLinks = document.querySelectorAll(".main-links");
   const yPosition = window.pageYOffset;
+  const animateSkills = document.querySelectorAll(".skills");
   const scrolled = document.documentElement.scrollTop;
-
-  if (window.width <= 500) {
-    console.log("i finally executed");
-  }
 
   // Scroll Parallax for my projects
   for (let i = 0; i < projectDescriptions.length; i++) {
@@ -92,8 +88,17 @@ const windowScroll = () => {
   }
 
   // Animates the Skills section, Project section, and about me container.
-  for (let i = 0; i < animateSkills.length; i++) {
-    if (yPosition > 80) {
+  if (window.outerWidth < 740) {
+    for (let i = 0; i < projectDescriptions.length; i++) {
+      console.log("nothing");
+      animateSkills[i].style.visibility = "visible";
+      animateSkills[3].style.visibility = "visible";
+      animateSkills[4].style.visibility = "visible";
+      animateSkills[5].style.visibility = "visible";
+    }
+  } else if (yPosition > 80 && window.outerWidth > 740) {
+    console.log("i ran");
+    for (let i = 0; i < animateSkills.length; i++) {
       animateSkills[i].classList.add("fall-in-animation");
     }
   }
@@ -102,7 +107,6 @@ const windowScroll = () => {
     if (yPosition >= 700) {
       smallProjectContainers[0].classList.add("rotateInUpRight");
       projectDescriptions[0].classList.add("rotateInUpLeft");
-      console.log("but i ran");
     }
     if (yPosition >= 1200) {
       bigProjectContainers.classList.add("rotateInUpLeft");
@@ -112,6 +116,10 @@ const windowScroll = () => {
       smallProjectContainers[1].classList.add("rotateInUpRight");
       projectDescriptions[2].classList.add("rotateInUpLeft");
     }
+  }
+
+  if (yPosition > 2000) {
+    contactMe.classList.add("fadeInUp");
   }
 
   if (yPosition > 2000) {
