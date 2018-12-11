@@ -12,6 +12,9 @@ const firstLargeCardOneWordContainer = document.querySelector(".code-word-contai
 const secondLargeCardOneWord = document.querySelector(".last-name");
 const hook = document.querySelector(".intro-container");
 
+// Alex:  Let's put all query selectors at the top of the file, instead of spread out.
+//      Also, let's remove unused selectors if there are no plans to do anything with them.
+
 document.querySelector(".hamburger-menu").addEventListener("click", toggleMenu);
 function toggleMenu() {
   this.classList.toggle("toggle-active");
@@ -42,11 +45,33 @@ const windowResize = () => {
   checkScreenWidth();
 };
 
+/* Alex: we could simplify the methods above to: window.onscroll = windowScroll;
+      but there may be a better idea.  In order to make the code easier
+      to understand and to maintain:
+      We could split up the main windowScroll function into something like:
+
+window.onscroll = function doRender() => {
+  setTopProperties();
+  toggleColors();
+  .. etc
+};
+*/
+
 window.onscroll = () => {
   windowScroll();
 };
 
+// Alex: One way to split this method up, as noted above,
+//     is to separate the logical groups into their own methods,
+//     and then the code becomes self documenting.
+//     There are even comments already explaining those groups!  That's a good place to start.
+
+// Alex: Performance was noted to be an issue, although it seems fine on my development machines :)
+//     One thing we could look at is requestAnimationFrame for asynchronous rendering.
 const windowScroll = () => {
+  // Alex: I'm not sure, but if we move these
+  //     query selectors outside of the scroll event handler,
+  //     we may get a performance improvement.
   const mainNav = document.querySelector(".main-nav");
   const logo = document.querySelector(".logo");
   const mainLinks = document.querySelectorAll(".main-links");
@@ -54,8 +79,20 @@ const windowScroll = () => {
   const animateSkills = document.querySelectorAll(".skills");
   const scrolled = document.documentElement.scrollTop;
 
+  // Alex: why do we have a for loop here?
   // Scroll Parallax for my projects
   for (let i = 0; i < projectDescriptions.length; i++) {
+
+    // Alex: there seems to be some repetitive code here.  Maybe we can do something about this.
+    //    Not perfect, but might be an improvement.  Where do the offset numbers come from?
+    /*
+     function setTop( element, offset, scrollRate ){
+        element.style.top = offset + scrolled * scrollRate + "px";
+      };
+
+      setTop( projectDescriptions[0].style.top, -80, 0.04 );
+      setTop( projectDescriptions[1].style.top, -110, 0.06 );
+      */
     projectDescriptions[0].style.top = -80 + scrolled * 0.04 + "px";
     projectDescriptions[1].style.top = -110 + scrolled * 0.06 + "px";
     projectDescriptions[2].style.top = -120 + scrolled * 0.08 + "px";
@@ -89,6 +126,7 @@ const windowScroll = () => {
 
   // Animates the Skills section, Project section, and about me container.
   if (window.outerWidth < 740) {
+    // Alex: This seems buggy, lets discuss what's going on with this one.
     for (let i = 0; i < projectDescriptions.length; i++) {
       console.log("nothing");
       animateSkills[i].style.visibility = "visible";
@@ -103,6 +141,7 @@ const windowScroll = () => {
     }
   }
 
+  // Alex: Can we eliminate the for loop here?
   for (let i = 0; i < projectDescriptions.length; i++) {
     if (yPosition >= 700) {
       smallProjectContainers[0].classList.add("rotateInUpRight");
