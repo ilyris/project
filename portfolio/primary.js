@@ -1,16 +1,20 @@
-const scrollButton = document.querySelector(".scroll-button");
+
 const projectDescriptions = document.querySelectorAll(".project-description");
 const smallProjectContainers = document.querySelectorAll(".small-project-container");
 const bigProjectContainers = document.querySelector(".big-project-container");
 const projectDescriptionEven = document.querySelector(".project-cards:nth-child(even) .project-description");
 const contactMe = document.querySelector(".card-4-container");
-const parallaxContainer = document.getElementById("card-1");
+
 const cardOneButton = document.querySelector(".contact-link-block");
 const cardOneImage = document.querySelector(".image-container");
 const firstLargeCardOneWord = document.querySelector(".code-word");
 const firstLargeCardOneWordContainer = document.querySelector(".code-word-container");
 const secondLargeCardOneWord = document.querySelector(".last-name");
 const hook = document.querySelector(".intro-container");
+const mainNav = document.querySelector(".main-nav");
+const logo = document.querySelector(".logo");
+const mainLinks = document.querySelectorAll(".main-links");
+const animateSkills = document.querySelectorAll(".skills");
 
 document.querySelector(".hamburger-menu").addEventListener("click", toggleMenu);
 function toggleMenu() {
@@ -43,22 +47,35 @@ const windowResize = () => {
 };
 
 window.onscroll = () => {
-  windowScroll();
+  animateElementsBasedOnWindowMeasurements();
+  setTopOfElements();
+  toggleScrolledNavigationBackground();
 };
 
-const windowScroll = () => {
-  const mainNav = document.querySelector(".main-nav");
-  const logo = document.querySelector(".logo");
-  const mainLinks = document.querySelectorAll(".main-links");
-  const yPosition = window.pageYOffset;
-  const animateSkills = document.querySelectorAll(".skills");
-  const scrolled = document.documentElement.scrollTop;
+function setTopOfElements( ){
+   const scrolled = document.documentElement.scrollTop;
 
-  // Scroll Parallax for my projects
-  for (let i = 0; i < projectDescriptions.length; i++) {
-    projectDescriptions[0].style.top = -80 + scrolled * 0.04 + "px";
-    projectDescriptions[1].style.top = -110 + scrolled * 0.06 + "px";
-    projectDescriptions[2].style.top = -120 + scrolled * 0.08 + "px";
+      // projectDescriptions[0].style.top = -80 + scrolled * 0.04 + "px";
+    // projectDescriptions[1].style.top = -110 + scrolled * 0.06 + "px";
+    // projectDescriptions[2].style.top = -120 + scrolled * 0.08 + "px";
+    // bigProjectContainers.style.top = -100 - scrolled * 0.06 + "px";
+    // smallProjectContainers[0].style.top = -100 - scrolled * 0.05 + "px";
+    // smallProjectContainers[1].style.top = -100 - scrolled * 0.06 + "px";
+    // hook.style.top = 0 - scrolled * 0.25 + "px";
+    // firstLargeCardOneWord.style.top = 0 - scrolled * 0.2 + "px";
+    // secondLargeCardOneWord.style.top = 400 - scrolled * 0.1 + "px";
+    // cardOneImage.style.top = 0 - scrolled * 0.05 + "px";
+    // cardOneButton.style.top = 0 + scrolled * 0.05 + "px";
+
+    // Scroll Parallax for my projects
+    const offsets = [-80, -110, -120];
+    const projectScrollParallaxRate = (n) => {
+      return 0.04 + 0.02 * n;
+    }
+    for (let i = 0; i < projectDescriptions.length; i++) {
+      projectDescriptions[i].style.top = offsets[i] + scrolled * projectScrollParallaxRate( i ) + "px";
+    }
+
     bigProjectContainers.style.top = -100 - scrolled * 0.06 + "px";
     smallProjectContainers[0].style.top = -100 - scrolled * 0.05 + "px";
     smallProjectContainers[1].style.top = -100 - scrolled * 0.06 + "px";
@@ -67,8 +84,10 @@ const windowScroll = () => {
     secondLargeCardOneWord.style.top = 400 - scrolled * 0.1 + "px";
     cardOneImage.style.top = 0 - scrolled * 0.05 + "px";
     cardOneButton.style.top = 0 + scrolled * 0.05 + "px";
-  }
+    
+}
 
+const toggleScrolledNavigationBackground = () => {
   //Main Navigation Scrolled Background
   mainNav.classList.toggle(
     "scrolled-nav-background",
@@ -86,24 +105,22 @@ const windowScroll = () => {
       mainLinks[i].style.color = "#000";
     }
   }
+}
 
+  // Scroll Parallax for my projects
+const animateElementsBasedOnWindowMeasurements = () => {
+  const yPosition = window.pageYOffset;
   // Animates the Skills section, Project section, and about me container.
   if (window.outerWidth < 740) {
-    for (let i = 0; i < projectDescriptions.length; i++) {
-      console.log("nothing");
+    for (let i = 0; i < animateSkills.length; i++) {
       animateSkills[i].style.visibility = "visible";
-      animateSkills[3].style.visibility = "visible";
-      animateSkills[4].style.visibility = "visible";
-      animateSkills[5].style.visibility = "visible";
     }
   } else if (yPosition > 80 && window.outerWidth > 740) {
-    console.log("i ran");
     for (let i = 0; i < animateSkills.length; i++) {
       animateSkills[i].classList.add("fall-in-animation");
     }
   }
 
-  for (let i = 0; i < projectDescriptions.length; i++) {
     if (yPosition >= 700) {
       smallProjectContainers[0].classList.add("rotateInUpRight");
       projectDescriptions[0].classList.add("rotateInUpLeft");
@@ -116,7 +133,6 @@ const windowScroll = () => {
       smallProjectContainers[1].classList.add("rotateInUpRight");
       projectDescriptions[2].classList.add("rotateInUpLeft");
     }
-  }
 
   if (yPosition > 2000) {
     contactMe.classList.add("fadeInUp");
@@ -125,9 +141,11 @@ const windowScroll = () => {
   if (yPosition > 2000) {
     contactMe.classList.add("fadeInUp");
   }
-};
+}
 
+//const mouseMoveParallax = () => {
 // // ****** Fires mouseover Parallax effect ******//
+// const parallaxContainer = document.getElementById("card-1");
 // parallaxContainer.addEventListener("mousemove", e => {
 // let screenWidth = window.outerWidth;
 //   let screenHeight = window.outerHeight;
@@ -139,3 +157,5 @@ const windowScroll = () => {
 //   hook.style.transform ="translate(" +(e.pageX / screenWidth) * 15 +"px, " +(e.pageY / screenHeight) * 15 +"px)";
 //   cardOneButton.style.transform ="translate(" +(e.pageX / screenWidth) * 15 +"px, " +(e.pageY / screenHeight) * 15 +"px)";
 // });
+//}
+
