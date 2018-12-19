@@ -1007,7 +1007,6 @@ a.projects-hover-effect:hover {
     left: 150px;
   }
   .project-cards:nth-child(even) .project-description {
-    width: 50%;
     left: -150px;
   }
 }
