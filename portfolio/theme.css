@@ -473,7 +473,8 @@ h2.name {
   box-sizing: border-box;
   height: fit-content;
   justify-content: flex-start;
-   opacity: 0; 
+  opacity: 0; 
+
 }
 
 .small-image-container {
@@ -487,6 +488,7 @@ h2.name {
   margin: 10px;
   position: relative;
   overflow: hidden;
+  transform: translateX(-10%);
 }
 
 .big-project-container {
@@ -507,6 +509,7 @@ h2.name {
   margin: 10px;
   position: relative;
   overflow: hidden;
+  transform: translateX(10%);
 }
 
 .big-project-container:nth-child(even) {
@@ -514,7 +517,7 @@ h2.name {
 }
 
 .project-description {
-  width: 50%;
+  width: 30%;
   position: relative;
   padding: 20px;
   text-align: left;
@@ -527,6 +530,11 @@ h2.name {
   z-index: 1;
   box-shadow: 2px 25px 30px -30px;
   opacity: 0; 
+  left: 250px;
+}
+
+.project-cards:nth-child(even) .project-description {
+  left: -250px;
 }
 
 .projects-name {
@@ -994,8 +1002,23 @@ a.projects-hover-effect:hover {
   .contact-link-block {
     grid-row: 7/7;
   }
+  .project-description {
+    width: 50%;
+    left: 150px;
+  }
+  .project-cards:nth-child(even) .project-description {
+    width: 50%;
+    left: -150px;
+  }
 }
-
+@media screen and (max-width: 1100px) {
+  .project-description {
+    left: auto;
+  }
+  .project-cards:nth-child(even) .project-description {
+    left: auto;
+  }
+}
 @media screen and (max-width: 960px) {
   /* medium devices -- Tablets -- */
   .last-name {
@@ -1004,6 +1027,11 @@ a.projects-hover-effect:hover {
   }
   .project-description {
     font-size: 18px;
+    width: 50%;
+    left: auto;
+  }
+  .project-cards:nth-child(even) .project-description {
+    left: auto;
   }
   .card-description {
     font-size: 20px;
@@ -1096,6 +1124,7 @@ a.projects-hover-effect:hover {
     width: 100%;
     margin: 0px;
   }
+  
   .project-description {
     font-size: 22px;
   }
@@ -1116,6 +1145,10 @@ a.projects-hover-effect:hover {
   }
   .main-footer .footer-links {
     width: 25%;
+  }
+  .small-image-container,
+  .big-image-container {
+    transform: none;
   }
 }
 
@@ -1140,4 +1173,5 @@ a.projects-hover-effect:hover {
   .fa-github, .fa-envelope, .fa-codepen {
     font-size: 24px;
   }
+  
 }

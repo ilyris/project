@@ -4,7 +4,6 @@ const smallProjectContainers = document.querySelectorAll(".small-project-contain
 const bigProjectContainers = document.querySelector(".big-project-container");
 const projectDescriptionEven = document.querySelector(".project-cards:nth-child(even) .project-description");
 const contactMe = document.querySelector(".card-4-container");
-
 const cardOneButton = document.querySelector(".contact-link-block");
 const cardOneImage = document.querySelector(".image-container");
 const firstLargeCardOneWord = document.querySelector(".code-word");
@@ -22,28 +21,28 @@ function toggleMenu() {
   document.querySelector(".main-ul").classList.toggle("on");
 }
 
-// Create function to check the screens width
-const checkScreenWidth = () => {
-  if (window.outerWidth > 740) {
-    for (let i = 0; i < projectDescriptions.length; i++) {
-      projectDescriptions[i].style.left = "100px";
-      projectDescriptionEven.style.left = "-100px";
-    }
-  } else if (window.outerWidth < 740) {
-    for (let i = 0; i < projectDescriptions.length; i++) {
-      projectDescriptions[i].style.left = "auto";
-      projectDescriptionEven.style.left = "auto";
-    }
-  }
-};
 
-checkScreenWidth();
+// const checkScreenWidth = () => {
+//   if (window.outerWidth > 960 ) {
+//     for (let i = 0; i < projectDescriptions.length; i++) {
+//       projectDescriptions[i].style.left = "250px";
+//       projectDescriptionEven.style.left = "-250px";
+//     }
+//   } else if (window.outerWidth < 960) {
+//     for (let i = 0; i < projectDescriptions.length; i++) {
+//       projectDescriptions[i].style.left = "auto";
+//       projectDescriptionEven.style.left = "auto";
+//     }
+//   }
+// };
+
+// checkScreenWidth();
 
 window.onresize = () => {
   windowResize();
 };
 const windowResize = () => {
-  checkScreenWidth();
+  // checkScreenWidth();
 };
 
 window.onscroll = () => {
@@ -69,8 +68,8 @@ function setTopOfElements( ){
 
     // Scroll Parallax for my projects
     const offsets = [-80, -110, -120];
-    const projectScrollParallaxRate = (n) => {
-      return 0.04 + 0.02 * n;
+    const projectScrollParallaxRate = (i) => {
+      return 0.04 + 0.02 * i;
     }
     for (let i = 0; i < projectDescriptions.length; i++) {
       projectDescriptions[i].style.top = offsets[i] + scrolled * projectScrollParallaxRate( i ) + "px";
@@ -84,11 +83,9 @@ function setTopOfElements( ){
     secondLargeCardOneWord.style.top = 400 - scrolled * 0.1 + "px";
     cardOneImage.style.top = 0 - scrolled * 0.05 + "px";
     cardOneButton.style.top = 0 + scrolled * 0.05 + "px";
-    
 }
 
 const toggleScrolledNavigationBackground = () => {
-  //Main Navigation Scrolled Background
   mainNav.classList.toggle(
     "scrolled-nav-background",
     mainNav.scrollTop / screen.height > 0.75 ||
@@ -110,7 +107,6 @@ const toggleScrolledNavigationBackground = () => {
   // Scroll Parallax for my projects
 const animateElementsBasedOnWindowMeasurements = () => {
   const yPosition = window.pageYOffset;
-  // Animates the Skills section, Project section, and about me container.
   if (window.outerWidth < 740) {
     for (let i = 0; i < animateSkills.length; i++) {
       animateSkills[i].style.visibility = "visible";
