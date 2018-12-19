@@ -707,14 +707,11 @@ a.projects-hover-effect:hover {
   transition: all ease 300ms;
 }
 
-.email:hover,
-.fa-envelope {
-  color: #fff;
+.email:hover {
+  color: #42a5f5;
 }
 
-.fa-phone,
 .fa-envelope {
-  color: black;
   padding: 5px;
   font-size: 26px;
 }
