@@ -529,6 +529,7 @@ h2.name {
   margin: 0;
   display: flex;
   align-items: center;
+  padding: 20px;
 }
 
 .project-cards:nth-child(even) .project-description {
@@ -1001,23 +1002,29 @@ h2.name {
   }
 
   .project-description {
-    width: 50%;
-    left: 150px;
+    width: 100%;
+    left: auto;
+    grid-column: 2/6;
   }
 
   .project-cards:nth-child(even) .project-description {
-    left: -150px;
+    left: auto;
+    grid-column: 7/11;
   }
+
 }
 
 @media screen and (max-width: 1100px) {
   .project-description {
     left: auto;
+    grid-column: 2/6;
   }
 
   .project-cards:nth-child(even) .project-description {
     left: auto;
+    grid-column: 6/10;
   }
+
 }
 
 @media screen and (max-width: 960px) {
@@ -1029,8 +1036,8 @@ h2.name {
   }
 
   .project-description {
-    font-size: 18px;
-    width: 50%;
+    font-size: 2.5em;
+    width: 100%;
     left: auto;
   }
 
@@ -1133,18 +1140,24 @@ h2.name {
   }
 
   #card-3 .project-cards {
-    display: flex;
+    /* display: flex; */
     justify-content: space-around;
     flex-direction: column-reverse;
-    margin: 0;
-  }
-
-  .project-description.animated {
+    margin: 50px 0;
+    height: 50vh;
+}
+.big-project-container {
+  height: 100%;
+}
+  .project-description {
     box-sizing: border-box;
     padding: 10px;
     width: 100%;
     margin: 0px;
-  }
+    text-align: left;
+    font-size: 2em;
+    display: block;
+}
 
   .project-description {
     font-size: 22px;
@@ -1175,6 +1188,10 @@ h2.name {
   .small-image-container,
   .big-image-container {
     transform: none;
+    width: 100%;
+    display: block;
+    height: 100%;
+    margin: 0;
   }
 }
 
@@ -1182,7 +1199,9 @@ h2.name {
   .last-name {
     font-size: 5em;
   }
-
+  .project-cards {
+    display: flex;
+  }
   .project-description,
   .small-project-container,
   .big-project-container {
@@ -1206,5 +1225,8 @@ h2.name {
   .fa-codepen {
     font-size: 24px;
   }
-
+.small-project-container {
+  display: block;
+  height: 100%;
+}
 }
