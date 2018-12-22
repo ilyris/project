@@ -1159,7 +1159,9 @@ h2.name {
   .about-me-description-image-container {
     flex-direction: column;
   }
-
+.card-4-container {
+  opacity: 1;
+}
   p.card-4.card-description {
     width: 100%;
     padding: 0;
