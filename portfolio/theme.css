@@ -473,7 +473,7 @@ h2.name {
 }
 
 .project-link {
-  grid-row: 1/11;
+  grid-row: 1/9;
   grid-column: 3/12;
   z-index: 10;
 }
@@ -999,7 +999,7 @@ h2.name {
 @media screen and (max-width: 1100px) {
   .project-description {
     left: auto;
-    grid-column: 2/6;
+    grid-column: 1/5;
   }
 
   .project-cards:nth-child(even) .project-description {
@@ -1219,7 +1219,9 @@ h2.name {
   .main-footer .footer-links li a {
     white-space: nowrap;
   }
-
+  #card-2 .fa-github {
+    font-size: 100px;
+  }
   .fa-github,
   .fa-envelope,
   .fa-codepen {
