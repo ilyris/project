@@ -471,15 +471,18 @@ h2.name {
   opacity: 0;
   height: 100%;
 }
+
 .project-link {
   grid-row: 1/11;
   grid-column: 3/12;
   z-index: 10;
 }
+
 .project-link.keehn {
   grid-row: 1/11;
   grid-column: 1/9;
 }
+
 .big-project-container {
   grid-row: 1/11;
   grid-column: 1/9;
@@ -495,9 +498,11 @@ h2.name {
   margin: 10px;
   position: relative;
 }
+
 .small-image-container img {
   width: 100%;
 }
+
 .big-project-container:nth-child(even) {
   flex-direction: row-reverse;
   grid-row: 2/11;
@@ -1025,6 +1030,7 @@ h2.name {
   .card-description {
     font-size: 20px;
   }
+
 }
 
 @media screen and (max-width: 740px) {
@@ -1117,27 +1123,26 @@ h2.name {
   }
 
   #card-3 .project-cards {
-    /* display: flex; */
-    justify-content: space-around;
+    display: flex;
+    /* justify-content: space-around; */
     flex-direction: column-reverse;
     margin: 50px 0;
     height: 50vh;
-}
-.big-project-container {
-  height: 100%;
-}
+  }
+
+  .big-project-container {
+    height: 100%;
+  }
+
   .project-description {
     box-sizing: border-box;
     padding: 10px;
     width: 100%;
     margin: 0px;
     text-align: left;
-    font-size: 2em;
+    font-size: 3em;
     display: block;
-}
-
-  .project-description {
-    font-size: 22px;
+    text-align: center;
   }
 
   .about-me-description-image-container {
@@ -1170,19 +1175,37 @@ h2.name {
     height: 100%;
     margin: 0;
   }
+  .project-link {
+    grid-row: 1/8 !important;
+  }
 }
 
 @media screen and (max-width: 500px) {
   .last-name {
     font-size: 5em;
   }
+
   .project-cards {
     display: flex;
   }
+
+  .small-image-container,
+  .big-image-container {
+    margin: 0;
+  }
+
   .project-description,
   .small-project-container,
   .big-project-container {
     opacity: 1;
+  }
+
+  .project-link.keehn,
+  .project-link.knight,
+  .project-link.placeholder {
+    height: 350px;
+  }.small-image-container img {
+    height: 100%;;
   }
 
   #card-4 {
@@ -1202,8 +1225,13 @@ h2.name {
   .fa-codepen {
     font-size: 24px;
   }
-.small-project-container {
-  display: block;
-  height: 100%;
-}
+
+  .small-project-container {
+    display: block;
+    height: 100%;
+  }
+
+  .project-description {
+    grid-row: 5/6;
+  }
 }
