@@ -702,6 +702,7 @@ h2.name {
   width: 100%;
   display: flex;
   padding: 10px;
+  box-sizing: border-box;
 }
 
 .main-footer .footer-links {
@@ -1225,10 +1226,8 @@ h2.name {
   #card-2 .fa-github {
     font-size: 100px;
   }
-  .fa-github,
-  .fa-envelope,
-  .fa-codepen {
-    font-size: 24px;
+  .main-footer .company-icons {
+    display: none;
   }
 
   .small-project-container {
