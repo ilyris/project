@@ -12,39 +12,31 @@ const secondLargeCardOneWord = document.querySelector(".last-name");
 const hook = document.querySelector(".intro-container");
 const mainNav = document.querySelector(".main-nav");
 const logo = document.querySelector(".logo");
-const mainLinks = document.querySelectorAll(".main-links");
+let mainLinks = document.querySelectorAll(".main-links");
 const animateSkills = document.querySelectorAll(".skills");
 
 document.querySelector(".hamburger-menu").addEventListener("click", toggleMenu);
+
 function toggleMenu() {
   this.classList.toggle("toggle-active");
   document.querySelector(".main-ul").classList.toggle("on");
 }
+const linksInnerText = [];
+const hideNavigationText = () => {
 
+if(screen.width <= 600) {
+  for(let value of mainLinks) {
+    linksInnerText.push(value.innerText);
+    console.log(linksInnerText);
+  }
+} 
+} 
 
-// const checkScreenWidth = () => {
-//   if (window.outerWidth > 960 ) {
-//     for (let i = 0; i < projectDescriptions.length; i++) {
-//       projectDescriptions[i].style.left = "250px";
-//       projectDescriptionEven.style.left = "-250px";
-//     }
-//   } else if (window.outerWidth < 960) {
-//     for (let i = 0; i < projectDescriptions.length; i++) {
-//       projectDescriptions[i].style.left = "auto";
-//       projectDescriptionEven.style.left = "auto";
-//     }
-//   }
+//in mobile from 500px - 740px Set up hamburger menu to be displayed: block; with the ul display: none; On click toggle the menu and display the menu, Icons Only.
+
+// window.onresize = () => {
+//   windowResize();
 // };
-
-// checkScreenWidth();
-
-window.onresize = () => {
-  windowResize();
-};
-const windowResize = () => {
-  // checkScreenWidth();
-};
-
 window.onscroll = () => {
   animateElementsBasedOnWindowMeasurements();
   setTopOfElements();

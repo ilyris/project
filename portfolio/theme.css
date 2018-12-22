@@ -52,7 +52,9 @@
   margin: 0;
   transition: all 0.5s ease-in-out;
 }
-
+.main-links p {
+ margin: 0;
+}
 li.main-li {
   padding: 0 25px;
   width: 100px;
@@ -1047,15 +1049,20 @@ h2.name {
   h2.name {
     flex-basis: auto;
     padding-left: 10px;
+    justify-content: space-between;
   }
 
   #card-1 .main-ul {
-    display: flex;
+    /* display: flex; */
     flex-basis: 100%;
     box-sizing: border-box;
     justify-content: space-evenly;
     margin: 0;
     padding: 0;
+  }
+
+  .main-nav {
+    justify-content: space-between;
   }
 
   li.main-li {
@@ -1072,7 +1079,7 @@ h2.name {
     color: #42a5f5;
   }
 
-  #card-1 .hamburger-menu {
+  .main-ul {
     display: none;
   }
 
@@ -1176,6 +1183,7 @@ h2.name {
     height: 100%;
     margin: 0;
   }
+
   .project-link {
     grid-row: 1/8 !important;
   }
@@ -1205,13 +1213,17 @@ h2.name {
   .project-link.knight,
   .project-link.placeholder {
     height: 350px;
-  }.small-image-container img {
-    height: 100%;;
+  }
+
+  .small-image-container img {
+    height: 100%;
+    ;
   }
 
   #card-4 {
     width: 100%;
   }
+
   #card-3 {
     margin-top: 150px;
   }
@@ -1223,9 +1235,11 @@ h2.name {
   .main-footer .footer-links li a {
     white-space: nowrap;
   }
+
   #card-2 .fa-github {
     font-size: 100px;
   }
+
   .main-footer .company-icons {
     display: none;
   }
@@ -1238,4 +1252,16 @@ h2.name {
   .project-description {
     grid-row: 5/6;
   }
+  /* .link-text {
+    display: none;
+  } */
+  .main-nav {
+    justify-content: flex-end;
+}
+.main-nav h2 {
+  display: none;
+}
+.main-nav i {
+  display: none;
+}
 }
