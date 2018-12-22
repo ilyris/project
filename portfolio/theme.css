@@ -528,6 +528,9 @@ h2.name {
   align-items: center;
   padding: 20px;
 }
+.placeholder-project .project-description {
+  grid-row: 2/3;
+}
 
 .project-cards:nth-child(even) .project-description {
   grid-column: 7/11;

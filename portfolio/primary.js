@@ -33,9 +33,9 @@ if (window.innerWidth <= 500) {
 }
 
 
-window.onresize = () => {
-  removeAnimations();
-};
+// window.onresize = () => {
+//   removeAnimations();
+// };
 window.onscroll = () => {
   animateElementsBasedOnWindowMeasurements();
   setTopOfElements();
@@ -43,17 +43,17 @@ window.onscroll = () => {
 };
 
 
-const removeAnimations = () => {
-  if (window.innerWidth <= 500) {
-    console.log(smallProjectContainers);
-    for (let i = 0; i < projectDescriptions.length; i++) {
-      smallProjectContainers[i].className = "small-project-container";
-      bigProjectContainers.className = "big-project-container";
-      projectDescriptions[i].className = "project-description";
-      console.log('im firing');
-    }
-  }
-}
+// const removeAnimations = () => {
+//   if (window.innerWidth <= 500) {
+//     console.log(smallProjectContainers);
+//     for (let i = 0; i < projectDescriptions.length; i++) {
+//       smallProjectContainers[i].className = "small-project-container";
+//       bigProjectContainers.className = "big-project-container";
+//       projectDescriptions[i].className = "project-description";
+//       console.log('im firing');
+//     }
+//   }
+// }
 
 
 function setTopOfElements( ){
