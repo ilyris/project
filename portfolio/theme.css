@@ -99,12 +99,12 @@ a::after {
   width: 0%;
 }
 
-a.main-links::before {
+.main-links::before {
   left: 0;
   font-size: 16px;
 }
 
-a.main-links::after {
+.main-links::after {
   right: 0;
   background: #42a5f5;
   transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
@@ -324,13 +324,6 @@ h2.name {
   color: #0d47a1;
 }
 
-.random-image {
-  background: url(annie10.jpg);
-  background-attachment: fixed;
-  width: 100%;
-  height: auto;
-}
-
 #card-2 {
   width: 100%;
   position: relative;
@@ -476,15 +469,25 @@ h2.name {
   box-sizing: border-box;
   justify-content: flex-start;
   opacity: 0;
+  height: 100%;
+}
+.project-link {
   grid-row: 1/11;
   grid-column: 3/12;
+  z-index: 10;
+}
+.project-link.keehn {
+  grid-row: 1/11;
+  grid-column: 1/9;
+}
+.big-project-container {
+  grid-row: 1/11;
+  grid-column: 1/9;
 }
 
 .small-image-container,
 .big-image-container {
   flex-basis: 100%;
-  background: url(project1.jpeg);
-  background-size: cover;
   display: flex;
   justify-content: flex-end;
   height: 100%;
@@ -492,24 +495,11 @@ h2.name {
   margin: 10px;
   position: relative;
 }
-/* 
-.big-project-container {
-  flex-basis: 50%;
-  display: flex;
-  box-sizing: border-box;
-  height: fit-content;
-  order: 2;
-  opacity: 0;
-} */
-
-.big-image-container {
-  height: 100%;
-  background: none;
+.small-image-container img {
+  width: 100%;
 }
-
 .big-project-container:nth-child(even) {
   flex-direction: row-reverse;
-
   grid-row: 2/11;
   grid-column: 1/9;
 }
@@ -520,7 +510,7 @@ h2.name {
   color: #000;
   box-sizing: border-box;
   background: rgb(227, 230, 235);
-  z-index: 1;
+  z-index: 11;
   opacity: 0;
   letter-spacing: 2px;
   font-weight: bold;
@@ -534,19 +524,6 @@ h2.name {
 
 .project-cards:nth-child(even) .project-description {
   grid-column: 7/11;
-}
-
-.projects-name {
-  color: #00bbbb;
-  font-size: 1.7em;
-  position: absolute;
-  top: 65%;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  text-transform: uppercase;
-  text-shadow: 2px 2px 2px #000;
-  width: 100px;
 }
 
 .big-image-container img {
