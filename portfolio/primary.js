@@ -22,39 +22,15 @@ function toggleMenu() {
   document.querySelector(".main-ul").classList.toggle("on");
 }
 
-if (window.innerWidth <= 500) {
-  console.log(smallProjectContainers);
-  for (let i = 0; i < animateSkills.length; i++) {
-    smallProjectContainers[i].className = "small-project-container";
-    bigProjectContainers.className = "big-project-container";
-    projectDescriptions[i].className = "project-description";
-    console.log('im firing');
-  }
-}
-
-
 // window.onresize = () => {
 //   removeAnimations();
 // };
+
 window.onscroll = () => {
   animateElementsBasedOnWindowMeasurements();
   setTopOfElements();
   toggleScrolledNavigationBackground();
 };
-
-
-// const removeAnimations = () => {
-//   if (window.innerWidth <= 500) {
-//     console.log(smallProjectContainers);
-//     for (let i = 0; i < projectDescriptions.length; i++) {
-//       smallProjectContainers[i].className = "small-project-container";
-//       bigProjectContainers.className = "big-project-container";
-//       projectDescriptions[i].className = "project-description";
-//       console.log('im firing');
-//     }
-//   }
-// }
-
 
 function setTopOfElements( ){
    const scrolled = document.documentElement.scrollTop;
@@ -123,16 +99,16 @@ const animateElementsBasedOnWindowMeasurements = () => {
   }
 
     if (yPosition >= 700) {
-      smallProjectContainers[0].classList.add("rotateInUpRight");
-      projectDescriptions[0].classList.add("rotateInUpLeft");
+      smallProjectContainers[0].classList.add("fadeInRight");
+      projectDescriptions[0].classList.add("fadeInLeft");
     }
     if (yPosition >= 1200) {
-      bigProjectContainers.classList.add("rotateInUpLeft");
-      projectDescriptionEven.classList.add("rotateInUpRight");
+      bigProjectContainers.classList.add("fadeInLeft");
+      projectDescriptionEven.classList.add("fadeInRight");
     }
     if (yPosition >= 1500) {
-      smallProjectContainers[1].classList.add("rotateInUpRight");
-      projectDescriptions[2].classList.add("rotateInUpLeft");
+      smallProjectContainers[1].classList.add("fadeInRight");
+      projectDescriptions[2].classList.add("fadeInLeft");
     }
 
   if (yPosition > 2000) {

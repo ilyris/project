@@ -522,11 +522,12 @@ h2.name {
   letter-spacing: 2px;
   font-weight: bold;
   grid-row: 5/7;
-  grid-column: 1/5;
+  grid-column: 2/5;
   margin: 0;
   display: flex;
   align-items: center;
   padding: 20px;
+  justify-content: center;
 }
 .placeholder-project .project-description {
   grid-row: 2/3;
