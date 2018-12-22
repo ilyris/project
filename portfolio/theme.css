@@ -1264,4 +1264,7 @@ h2.name {
 .main-nav i {
   display: none;
 }
+.skills {
+  visibility: visible;
+}
 }

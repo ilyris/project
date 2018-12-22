@@ -21,27 +21,40 @@ function toggleMenu() {
   this.classList.toggle("toggle-active");
   document.querySelector(".main-ul").classList.toggle("on");
 }
-const linksInnerText = [];
-const hideNavigationText = () => {
 
-if(screen.width <= 600) {
-  for(let value of mainLinks) {
-    linksInnerText.push(value.innerText);
-    console.log(linksInnerText);
+if (window.innerWidth <= 500) {
+  console.log(smallProjectContainers);
+  for (let i = 0; i < animateSkills.length; i++) {
+    smallProjectContainers[i].className = "small-project-container";
+    bigProjectContainers.className = "big-project-container";
+    projectDescriptions[i].className = "project-description";
+    console.log('im firing');
   }
-} 
-} 
+}
 
-//in mobile from 500px - 740px Set up hamburger menu to be displayed: block; with the ul display: none; On click toggle the menu and display the menu, Icons Only.
 
-// window.onresize = () => {
-//   windowResize();
-// };
+window.onresize = () => {
+  removeAnimations();
+};
 window.onscroll = () => {
   animateElementsBasedOnWindowMeasurements();
   setTopOfElements();
   toggleScrolledNavigationBackground();
 };
+
+
+const removeAnimations = () => {
+  if (window.innerWidth <= 500) {
+    console.log(smallProjectContainers);
+    for (let i = 0; i < projectDescriptions.length; i++) {
+      smallProjectContainers[i].className = "small-project-container";
+      bigProjectContainers.className = "big-project-container";
+      projectDescriptions[i].className = "project-description";
+      console.log('im firing');
+    }
+  }
+}
+
 
 function setTopOfElements( ){
    const scrolled = document.documentElement.scrollTop;
