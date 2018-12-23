@@ -1138,8 +1138,8 @@ h2.name {
     display: flex;
     /* justify-content: space-around; */
     flex-direction: column-reverse;
-    margin: 50px 0;
-    height: 50vh;
+    /* margin: 50px 0;
+    height: 50vh; */
   }
 
   .big-project-container {
