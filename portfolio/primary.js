@@ -22,10 +22,6 @@ function toggleMenu() {
   document.querySelector(".main-ul").classList.toggle("on");
 }
 
-// window.onresize = () => {
-//   removeAnimations();
-// };
-
 window.onscroll = () => {
   animateElementsBasedOnWindowMeasurements();
   setTopOfElements();
