@@ -1,7 +1,4 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable quotes */
-/* eslint-disable no-trailing-spaces */
-// something you might consider is running your code through a 'linter'
+// AR - something you might consider is running your code through a 'linter'
 // I use ESLint and you can apply different style guide requirements to your code
 // like AirBnb or Google's JS standards, for example
 const projectDescriptions = document.querySelectorAll(".project-description");
@@ -17,18 +14,18 @@ const secondLargeCardOneWord = document.querySelector(".last-name");
 const hook = document.querySelector(".intro-container");
 const mainNav = document.querySelector(".main-nav");
 const logo = document.querySelector(".logo");
-// is there a reason to use let vs const here?
+// AR - is there a reason to use let vs const here?
 let mainLinks = document.querySelectorAll(".main-links");
 const animateSkills = document.querySelectorAll(".skills");
 
-// there are a few different ways we could organize this file
+// AR - there are a few different ways we could organize this file
 // one school of thought recommends that you define all the methods above their use,
 // so we could move all the function definitions above their invocations
 // part of the reason for this is to avoid problems with hoisting
 // here is a SO answer going over it a bit: https://stackoverflow.com/questions/7609276/javascript-function-order-why-does-it-matter
 // also, Kyle Simpson's book is great on this topic
 
-// can we follow the same pattern above of selecting this element and then adding the behavior separately?
+// AR - can we follow the same pattern above of selecting this element and then adding the behavior separately?
 document.querySelector(".hamburger-menu").addEventListener("click", toggleMenu);
 
 function toggleMenu() {
@@ -46,7 +43,7 @@ window.onscroll = () => {
   toggleScrolledNavigationBackground();
 };
 
-// I like to put a space after the parentheses in functions: 
+// AR - I like to put a space after the parentheses in functions: 
 // ie. function foo() { }
 function setTopOfElements( ){
    const scrolled = document.documentElement.scrollTop;
@@ -65,14 +62,14 @@ function setTopOfElements( ){
 
     // Scroll Parallax for my projects
     const offsets = [-80, -110, -120];
-    // when we use a lambda expression like this, part of the fun is that we can place it on one line, like this:
+    // AR - when we use a lambda expression like this, part of the fun is that we can place it on one line, like this:
     // const projectScrollParallaxRate = i => 0.04 + 0.02 * i;
     // you can also omit the return statement and the curly braces in these cases
     const projectScrollParallaxRate = (i) => {
       return 0.04 + 0.02 * i;
     }
     for (let i = 0; i < projectDescriptions.length; i++) {
-      // here and throughout your code we could use a template literal in place of string concatenation
+      // AR - here and throughout your code we could use a template literal in place of string concatenation
       // I think they are easier to read, and then you don't have to worry about escaping quotes (not relevant in this case)
       projectDescriptions[i].style.top = offsets[i] + scrolled * projectScrollParallaxRate( i ) + "px";
     }
@@ -90,13 +87,14 @@ function setTopOfElements( ){
 const toggleScrolledNavigationBackground = () => {
   mainNav.classList.toggle(
     "scrolled-nav-background",  
-    // it might help to encapsulate these values into a variable for easier reference and reading
+    // AR - it might help to encapsulate these values into a variable for easier reference and reading
     // meaning, it's not immediately obvious to me what this arithmetic is accomplishing
     mainNav.scrollTop / screen.height > 0.75 ||
       document.documentElement.scrollTop / screen.height > 0.75
   );
   if (mainNav.classList.contains("scrolled-nav-background")) {
     logo.style.color = "#fff";
+    // AR - if we have time, we should look at the for...of loop - it's a neat addition to ES6
     for (let i = 0; i < mainLinks.length; i++) {
       mainLinks[i].style.color = "#fff";
     }
@@ -121,18 +119,19 @@ const animateElementsBasedOnWindowMeasurements = () => {
     }
   }
 
-    if (yPosition >= 700) {
-      smallProjectContainers[0].classList.add("fadeInRight");
-      projectDescriptions[0].classList.add("fadeInLeft");
-    }
-    if (yPosition >= 1200) {
-      bigProjectContainers.classList.add("fadeInLeft");
-      projectDescriptionEven.classList.add("fadeInRight");
-    }
-    if (yPosition >= 1500) {
-      smallProjectContainers[1].classList.add("fadeInRight");
-      projectDescriptions[2].classList.add("fadeInLeft");
-    }
+  // AR - have you considered using a switch statement here?
+  if (yPosition >= 700) {
+    smallProjectContainers[0].classList.add("fadeInRight");
+    projectDescriptions[0].classList.add("fadeInLeft");
+  }
+  if (yPosition >= 1200) {
+    bigProjectContainers.classList.add("fadeInLeft");
+    projectDescriptionEven.classList.add("fadeInRight");
+  }
+  if (yPosition >= 1500) {
+    smallProjectContainers[1].classList.add("fadeInRight");
+    projectDescriptions[2].classList.add("fadeInLeft");
+  }
 
   if (yPosition > 2000) {
     contactMe.classList.add("fadeInUp");
