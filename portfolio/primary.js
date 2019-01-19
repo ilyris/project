@@ -19,13 +19,6 @@ const animateSkills = document.querySelectorAll('.skills');
 const hamburgerMenu = document.querySelector('.hamburger-menu');
 
 
-
-// AR - there are a few different ways we could organize this file
-// one school of thought recommends that you define all the methods above their use,
-// so we could move all the function definitions above their invocations
-// part of the reason for this is to avoid problems with hoisting
-// here is a SO answer going over it a bit: https://stackoverflow.com/questions/7609276/javascript-function-order-why-does-it-matter
-// also, Kyle Simpson's book is great on this topic
 hamburgerMenu.addEventListener('click', toggleMenu);
 
 function toggleMenu() {
@@ -39,8 +32,6 @@ window.onscroll = () => {
   toggleScrolledNavigationBackground();
 };
 
-// AR - I like to put a space after the parentheses in functions: 
-// ie. function foo() { }
 function setTopOfElements() {
    const scrolled = document.documentElement.scrollTop;
 
@@ -58,15 +49,13 @@ function setTopOfElements() {
 
     // Scroll Parallax for my projects
     const offsets = [-80, -110, -120];
-    // AR - when we use a lambda expression like this, part of the fun is that we can place it on one line, like this:
-    // const projectScrollParallaxRate = i => 0.04 + 0.02 * i;
     // you can also omit the return statement and the curly braces in these cases
     const projectScrollParallaxRate = i => 0.04 + 0.02 * i;
 
     for (let i = 0; i < projectDescriptions.length; i++) {
       // AR - here and throughout your code we could use a template literal in place of string concatenation
       // I think they are easier to read, and then you don't have to worry about escaping quotes (not relevant in this case)
-      projectDescriptions[i].style.top = `${offsets[ i ]} ${scrolled * projectScrollParallaxRate( i )} px`;
+      projectDescriptions[i].style.top =  offsets[ i ]  + scrolled * projectScrollParallaxRate( i ) + 'px';
     }
 
     bigProjectContainers.style.top = -100 - scrolled * 0.06 + 'px';
