@@ -12,61 +12,84 @@
     <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
         crossorigin="anonymous">
-
-
-
-
-
 </head>
 
 <body class="top-node">
     <div class="container-wrapper">
-        <section id="card-1" href="#home">
-            <nav class="main-nav">
-                <h2 class="name"><a class="logo" href="#card-1">DS</a></h2>
-                <ul class="main-ul">
-                    <li class="main-li home">
-                        <a class="main-links" href="#card-1"><p class="link-text">home</p><i class="fas fa-home"></i></a>
+            <div id="mobileMenuWrapper" class="animated">
+                    <ul id="mobileMenu">
+                        <li class="mobileLi"><a class="mobileLinks" href="#">Home</a></li>
+                        <li class="mobileLi dropDownParent"><a class="mobileLinks" href="#">Work</a></li>
+                        <li class="mobileLi"><a class="mobileLinks" href="#">About</a></li>
+                        <li class="mobileLi"><a class="mobileLinks" href="#">Contact</a></li>
+                    </ul>
+            
+                </div>
+                <div id="hamburgerWrapper">
+                        <a href="#" class="iconLinks">
+                            <i class="fas fa-home"></i>
+                            Home
+                        </a>
+                        <a href="#" class="iconLinks">
+                            <i class="fas fa-briefcase"></i>
+                            Work
+                        </a>
+                        <div id="hamburgerMenuContainer">
+                            <div class="hamburger-menu hidden-lg"><span></span></div>
+                        </div>
+                        <a href="#" class="iconLinks">
+                            <i class="fas fa-envelope"></i>
+                            Contact
+                        </a>
+                        <a href="#" class="iconLinks">
+                            <i class="fas fa-user-friends"></i>
+                            About
+                        </a>
+                    </div>
+        <section id="mainSection">
+            <div id="menuBarWrapper">
+                <div id ="logoContainer">
+                    <h1 class="logo">
+                        <a href="#mainSection">Dylan Sieren</a></h4>
+                </div>
+                <ul id="menu">
+                    <li class="menuLinks">
+                        <a class="menuLinkAnchors" href="#">Home</a>
                     </li>
-                    <li class="main-li resume">
-                        <a class="main-links" href="#"><p class="link-text">resume</p><i class="fas fa-file-download"></i></a>
+                    <li class="menuLinks">
+                        <a class="menuLinkAnchors" href="#card-2">Work</a>
                     </li>
-                    <li class="main-li projects">
-                        <a class="main-links" href="#card-3"><p class="link-text">work</p><i class="fas fa-briefcase"></i></a>
+                    <li class="menuLinks">
+                        <a class="menuLinkAnchors" href="#card-4">Contact</a>
                     </li>
-                    <li class="main-li about">
-                        <a class="main-links" href="#card-4"><p class="link-text">about</p><i class="fas fa-question"></i></a>
-                    </li>
-                </ul>
-                <div class="hamburger-menu hidden-lg"><span></span></div>
-            </nav>
-            <! - - - End Of Navigation - - - >
-            <div class="color-block"></div>
-            <div class="code-word-container">
-                <div class="code-word">Code</div>
-            </div>
+                    <li class="menuLinks">
+                        <a class="menuLinkAnchors" href="#card-4">About</a>
 
-            <div class="last-name animated">Enthusiast</div>
-            <div class="image-container"></div>
-            <div class="intro-container">
-                <p class="intro-text">You miss 100% of the shots you don't take. - <span class ="author-of-quote">Wayne Gretzky</span> </p>
-            </div>
-            <a class="scroll-button" href="#card-2"><span></span></a>
-            <div class="contact-link-block">
-                <ul class="contact-ul">
-                    <li class="contact-li">
-                        <a class="contact-link" href="#card-3">My Work</a>
-                    </li>
                 </ul>
             </div>
-
+            <div class="nameContainer">
+                <h2 class="title">
+                    <span>C</span><span>o</span><span>d</span><span>e</span> 
+                    <span>E</span><span>n</span><span>t</span><span>h</span><span>u</span><span>s</span><span>i</span><span>a</span><span>s</span><span>t</span><span>.</span>
+                </h2>
+                <h2 class="title">
+                    <span>F</span><span>r</span><span>o</span><span>n</span><span>t</span><span>-</span><span>E</span><span>n</span><span>d</span>
+                    <span>E</span><span>n</span><span>g</span><span>i</span><span>n</span><span>e</span><span>e</span><span>r</span><span>.</span>
+                </h2>
+                <h2 class="title"><span>G</span><span>a</span><span>m</span><span>e</span><span>r</span><span>.</span></h2>
+            </div>
+            <div class="workButtonContainer">
+                <div class="workButton">
+                    <span class="workButtonLine"></span>
+                    <a href="work.html">Show Projects <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <a class="scroll-button" href="#mySkills"><span></span></a>
         </section>
         <! - - - End first section -->
         <section id="card-2">
             <div class="multi-color-bg">
                 <h2 class="card-title">Technical Skills</h2>
-                <p class=" card-2 card-description">I enjoy learning new skills and cutting edge technology that I can
-                    apply on projects at home and at work</p>
                 <div class="skills">
                     <div class="skill-icon"><i class="fab fa-js"></i></div>
                     <h3 class="skill-title javascrip">JavaScript</h3>
@@ -95,7 +118,8 @@
             </div>
         </section>
         <!- - - Start of projects - - - >
-        <div id="card-3">
+        <h2 class="card-title">My Recent Work</h2>
+        <div id="card-3"> 
             <section class="project-cards knight-project">
                 <h3 class="project-description animated">Knight Watches</h3>
                 <a class ="project-link knight" href="https://ilyris.github.io/KnightWatches2019/">
@@ -149,22 +173,34 @@
                 </div>
             </div>
         </section>
-        <footer class="main-footer">
-            <ul class="footer-links">
-                <li><a href="#card-1"><i class="fas fa-home"></i>Home</a></li>
-                <li><a href="resume"><i class="fas fa-file-download"></i>Resume</a></li>
-                <li><a href="#card-3"><i class="fas fa-briefcase"></i>Work</a></li>
-                <li><a href="#card-4"><i class="fas fa-question"></i>About</a></li>
+        <footer id="mainFooter">
+            <ul class="footerLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="index.html#contactSection">Contact</a></li>
+                <li><a href="about.html">About</a></li>
             </ul>
-            <ul class ="company-icons">
+            <ul class="company-icons">
                 <li><a href="https://github.com/ilyris" target="_blank">
-                    <div class="icon-container"><i class="fab fa-github"></i></div></a></li>
-                <li><a href="https://codepen.io/dsieren/" target="_blank"><div class="icon-container"><i class="fab fa-codepen"></i></div></a></li>
+                        <div class="icon-container"><i class="fab fa-github"></i></div>
+                    </a></li>
+                <li><a href="https://codepen.io/dsieren/" target="_blank">
+                        <div class="icon-container"><i class="fab fa-codepen"></i></div>
+                    </a></li>
                 <li>
-                    <a class="email" href="mailto:dylan.sieren01@gmail.com"><div class="icon-container"><i class="fas fa-envelope"></i></div></a>
+                    <a class="email" href="mailto:dylan.sieren01@gmail.com">
+                        <div class="icon-container"><i class="fas fa-envelope"></i></div>
+                    </a>
                 </li>
             </ul>
-            <span class="copyright"><P>&#169 2019 Dylan Sieren</P></span>
+            <div id="logoWrapper">
+                    <a class="logo" href="#">
+                        Dylan Sieren
+                    </a>
+                </div>
+            <span class="copyright">
+                <p>© 2019 Dylan Sieren</p>
+            </span>
         </footer>
     </div>
     <script src="primary.js"></script>
