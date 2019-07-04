@@ -1301,16 +1301,18 @@ h6 {
 }
 
 @media screen and (max-width: 500px) {
+  /* Landing Section */
+  .nameContainer {
+    margin-top: 50px;
+}
+  .workButtonLine {
+    width: 25%;
+  }
 
-
-  /* end of mobile menu */
   .title {
     font-size: 3rem;
   }
 
-  .last-name {
-    font-size: 5em;
-  }
 
   .project-cards {
     display: flex;

@@ -18,14 +18,13 @@ document.querySelector('.hamburger-menu').addEventListener('click', toggleMenu, 
 
 
 window.onscroll = () => {
-
   if(window.innerWidth > 740) {
     setTopOfElements();
     animateElementsBasedOnWindowMeasurements();
   }
-
   toggleScrolledNavigationBackground();
 };
+
 function toggleMenu() {
   this.classList.toggle("toggle-active");
   const hamburgerMenu = document.querySelector('.hamburger-menu').classList;
