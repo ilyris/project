@@ -18,7 +18,7 @@ document.querySelector('.hamburger-menu').addEventListener('click', toggleMenu, 
 
 
 window.onscroll = () => {
-  if(window.innerWidth > 740) {
+  if(window.innerWidth > 770) {
     setTopOfElements();
     animateElementsBasedOnWindowMeasurements();
   }
