@@ -1035,20 +1035,9 @@ h6 {
       justify-content: center;
       border-radius: 50%;
       height: 50px;
-      bottom: 20px;
+      bottom: 25px;
+      box-shadow: 0px 2px 10px 2px #0000005c;
       position: relative;
-    }
-  
-    #hamburgerMenuContainer:after {
-      content: "";
-      width: 55px;
-      height: 55px;
-      position: absolute;
-      background: rgb(49, 109, 227);
-      background: linear-gradient(142deg, rgba(49, 109, 227, 1) 0%, rgba(0, 138, 255, 1) 100%);
-      z-index: -120;
-      border-radius: 50%;
-      bottom: -1px;
     }
   
     #closeMobileMenuButton.fa-times {
