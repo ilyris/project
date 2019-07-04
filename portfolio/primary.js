@@ -1,6 +1,4 @@
-// AR - something you might consider is running your code through a 'linter'
-// I use ESLint and you can apply different style guide requirements to your code
-// like AirBnb or Google's JS standards, for example
+
 const projectDescriptions = document.querySelectorAll('.project-description');
 const smallProjectContainers = document.querySelectorAll('.small-project-container');
 const bigProjectContainers = document.querySelector('.big-project-container');
@@ -15,13 +13,17 @@ const mainNav = document.querySelector('.main-nav');
 const logo = document.querySelector('.logo');
 const mainLinks = document.querySelectorAll('.main-links');
 const animateSkills = document.querySelectorAll('.skills');
-// const hamburgerMenu = document.querySelector('.hamburger-menu');
+
 document.querySelector('.hamburger-menu').addEventListener('click', toggleMenu, false);
 
 
 window.onscroll = () => {
-  animateElementsBasedOnWindowMeasurements();
-  setTopOfElements();
+
+  if(window.innerWidth > 740) {
+    setTopOfElements();
+    animateElementsBasedOnWindowMeasurements();
+  }
+
   toggleScrolledNavigationBackground();
 };
 function toggleMenu() {
@@ -37,25 +39,21 @@ function toggleMenu() {
   }
 
 }
-function setTopOfElements() {
-   const scrolled = document.documentElement.scrollTop;
-
-
-    // Scroll Parallax for my projects
+// Scroll Parallax
+function setTopOfElements() { 
+    const scrolled = document.documentElement.scrollTop;
     const offsets = [-80, -110, -120];
     const projectScrollParallaxRate = i => 0.04 + 0.02 * i;
-
     for (let i = 0; i < projectDescriptions.length; i++) {
       projectDescriptions[i].style.top =  offsets[ i ]  + scrolled * projectScrollParallaxRate( i ) + 'px';
     }
-
     bigProjectContainers.style.top = -100 - scrolled * 0.06 + 'px';
     smallProjectContainers[0].style.top = -100 - scrolled * 0.05 + 'px';
     smallProjectContainers[1].style.top = -100 - scrolled * 0.06 + 'px';
 }
 
 
-  // Scroll Parallax for my projects
+// Animate Elements
 const animateElementsBasedOnWindowMeasurements = () => {
   const yPosition = window.pageYOffset;
   if (window.outerWidth < 740) {
@@ -111,8 +109,8 @@ const toggleScrolledNavigationBackground = () => {
 // // ****** Fires mouseover Parallax effect ******//
 // const parallaxContainer = document.getElementById('card-1');
 // parallaxContainer.addEventListener('mousemove', e => {
-// let screenWidth = window.outerWidth;
-//   let screenHeight = window.outerHeight;
+//  let screenWidth = window.outerWidth;
+//  let screenHeight = window.outerHeight;
 
 //   // Elements move based on cursor movement
 //   cardOneImage.style.transform ='translate(-' +(e.pageX / screenWidth) * 10 +'px, -' +(e.pageY / screenHeight) * 10 +'px)';
