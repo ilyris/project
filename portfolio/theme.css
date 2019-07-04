@@ -260,7 +260,7 @@ h6 {
   justify-content: center;
   align-items: center;
 }
-#mainSection .company-icons li {
+.company-icons li {
   display: flex;
   align-items: center;
   padding: 0 5px;
@@ -534,7 +534,6 @@ h6 {
 
 .contact-container .card-description {
   width: 80%;
-  text-align: center;
 }
 
 .card-4-ul {
@@ -618,6 +617,9 @@ h6 {
   display: flex;
   color: white;
   transition: all ease 300ms;
+}
+.company-icons .email {
+  padding-bottom: 0;
 }
 
 
@@ -972,7 +974,7 @@ h6 {
     .hamburger-menu span:before {
       width: 25px;
       height: 3px;
-      background-color: #006ae4;
+      background-color: #97730e;
       transition: all 0.3s;
       backface-visibility: hidden;
       border-radius: 2px;
@@ -1008,8 +1010,8 @@ h6 {
       width: 100%;
       z-index: 111;
       display: flex;
-      background: rgb(49, 109, 227);
-      background: linear-gradient(142deg, rgba(49, 109, 227, 1) 0%, rgba(0, 138, 255, 1) 100%);
+      background: #97730e;
+      background: linear-gradient(142deg, #97730e 0%, #c0941c 100%);
     }
   
     #hamburgerWrapper .iconLinks {
@@ -1122,48 +1124,9 @@ h6 {
       color: #000;
       font-size: 2.4rem;
     }
-  
-    #subNavMobileMenu {
-      position: relative;
-      visibility: hidden;
-      height: 0;
-      background: #d0d0d0;
-    }
-  
-    #subNavMobileMenu.show {
-      visibility: visible;
-      height: auto;
-    }
-  
-    #subNavMobileMenu li {
-      list-style: none;
-      padding: 10px;
-      font-size: 1.6rem;
-      border-bottom: 1px solid #b5b3b3;
-      ;
-    }
-  
-    .dropDownIcon {
-      height: 50px;
-      width: 40px;
-      top: 0;
-      right: 0;
-      position: absolute;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #03A9F4;
-    }
-  
-    .dropDownIcon i {
-      transition: all ease-in-out 100ms;
-    }
-  
-    #subNavMobileMenu li a {
-      color: #000000;
-      letter-spacing: 1px;
-      padding-left: 10px;
-    }
+
+
+
     .workButton {
       width: 70%;
   }
@@ -1171,6 +1134,9 @@ h6 {
       font-size: 1.4rem;
       padding: 10px 20px;
       background: #97730e;
+  }
+  #mainSection {
+    height: 80vh;
   }
 .nameContainer {
   margin: 0 auto;
@@ -1264,13 +1230,16 @@ h6 {
   .card-title {
     font-size: 4rem;
   }
-
+#card-3 {
+  width: 100%;
+  padding: 0;
+  margin: 100px 0;
+}
   #card-3 .project-cards {
     display: flex;
-    /* justify-content: space-around; */
     flex-direction: column-reverse;
-    /* margin: 50px 0;
-    height: 50vh; */
+    margin: 50px;
+    height: auto;
   }
 
   .big-project-container {
@@ -1290,6 +1259,7 @@ h6 {
 
   .about-me-description-image-container {
     flex-direction: column;
+    padding: 10px;
   }
 
   .card-4-container {
@@ -1302,6 +1272,8 @@ h6 {
     margin: 0;
     padding: 10px;
     box-sizing: border-box;
+    font-size: 1.8rem;
+    font-weight: 100;
   }
 
 
@@ -1320,6 +1292,11 @@ h6 {
 
   .project-link {
     grid-row: 1/8 !important;
+  }
+  #card-4 {
+    margin: 0;
+    padding: 0;
+    width: auto;
   }
 }
 
