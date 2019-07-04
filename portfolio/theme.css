@@ -1238,7 +1238,7 @@ h6 {
   #card-3 .project-cards {
     display: flex;
     flex-direction: column-reverse;
-    margin: 50px;
+    margin: 50px 25px;
     height: auto;
   }
 
