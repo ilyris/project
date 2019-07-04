@@ -219,7 +219,7 @@ h6 {
   text-decoration: none;
   transition: opacity 0.3s;
   text-align: center;
-  width: 30px;
+  width: 60px;
   margin: 0 auto;
 }
 
@@ -255,6 +255,20 @@ h6 {
   transition: all 0.2s ease-in-out;
 }
 
+#mainSection .company-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#mainSection .company-icons li {
+  display: flex;
+  align-items: center;
+  padding: 0 5px;
+}
+#mainSection .company-icons li .fa-envelope {
+  padding: 0;
+}
+/* Skills Section */
 
 #card-2 {
   width: 100%;
@@ -550,11 +564,6 @@ h6 {
   color: #97730e;
 }
 
-.fa-envelope {
-  padding: 5px;
-  font-size: 26px;
-}
-
 .card-4.card-title {
   border: none;
   background: none;
@@ -574,7 +583,7 @@ h6 {
   justify-content: center;
   box-sizing: border-box;
   align-items: center;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 }
 
 #mainFooter .footerLinks {
@@ -621,7 +630,7 @@ h6 {
 
 .company-icons li {
   list-style: none;
-  padding-right: 5px;
+  /* padding-right: 5px; */
 }
 
 .company-icons li a {
