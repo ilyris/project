@@ -1065,7 +1065,7 @@ h6 {
 
   #mobileMenuWrapper {
     position: fixed;
-    z-index: 100;
+    z-index: 101;
     height: 100%;
     background: #fff;
     bottom: 0;
