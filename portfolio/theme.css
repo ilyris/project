@@ -146,7 +146,7 @@ h6 {
 .name,
 .title {
   letter-spacing: -1px;
-  font-size: calc(5.5rem + 3vw);
+  font-size: calc(5rem + 2vw);
   color: rgb(255, 255, 255);
   z-index: 1;
   text-shadow: -5px 5px 15px #0c0c0c;
@@ -937,7 +937,7 @@ h6 {
 
 }
 
-@media screen and (max-width: 800) {
+@media screen and (max-width: 800px) {
 
   /* Mobile Menu */
   #closeMobileMenuButton {
@@ -1035,6 +1035,7 @@ h6 {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding: 10px;
   }
 
   .iconLinks i {
@@ -1053,6 +1054,8 @@ h6 {
     bottom: 25px;
     box-shadow: 0px 2px 10px 2px #0000005c;
     position: relative;
+    /* display none is only here till I add more items to my website */
+    display: none;
   }
 
   #closeMobileMenuButton.fa-times {
@@ -1265,11 +1268,11 @@ h6 {
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 570px) {
 
   /* Landing Section */
  .title {
-    font-size: 3rem;
+    font-size: 4rem;
   }
 
   .nameContainer {
@@ -1309,7 +1312,7 @@ h6 {
   .project-link.keehn,
   .project-link.knight,
   .project-link.placeholder {
-    height: 350px;
+    height: 250px;
   }
 
   .small-image-container img {
