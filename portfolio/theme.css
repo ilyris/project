@@ -553,7 +553,11 @@ h6 {
   box-sizing: border-box;
   text-align: center;
 }
-
+.contact-container .email {
+  border: 1px solid #fff;
+  padding: 10px 20px;
+  margin-bottom: 11px;
+}
 .email {
   font-size: 26px;
   color: #fff;
@@ -561,7 +565,9 @@ h6 {
   transition: all ease 300ms;
   padding-bottom: 20px;
 }
-
+.contact-container .email i.fas.fa-envelope {
+  padding-left: 20px;
+}
 .email:hover {
   color: #97730e;
 }
