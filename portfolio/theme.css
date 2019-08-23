@@ -183,7 +183,7 @@ h6 {
 }
 
 .workButton a {
-  font-size: 2.5rem;
+  font-size: calc(1.2rem + 1.5vw);
   padding: 15px 25px;
   background: #97730e;
   color: white;
@@ -198,7 +198,7 @@ h6 {
 }
 
 .workButtonLine {
-  width: 60%;
+  width: 55%;
   height: 5px;
   background: #97730e;
 }
@@ -934,6 +934,9 @@ h6 {
   .card-description {
     font-size: 20px;
   }
+  .workButtonLine {
+    width: 50%;
+}
 
 }
 
@@ -1057,7 +1060,9 @@ h6 {
     /* display none is only here till I add more items to my website */
     display: none;
   }
-
+.workButtonLine {
+    width: 40%;
+}
   #closeMobileMenuButton.fa-times {
     color: #fff;
     right: 7%;
