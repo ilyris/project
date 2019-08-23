@@ -1084,7 +1084,7 @@ h6 {
   }
 
   #mobileMenuWrapper.mobileOn {
-    width: 100%;
+    width: 80%;
     visibility: visible;
   }
 
