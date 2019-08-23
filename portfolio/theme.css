@@ -556,7 +556,7 @@ h6 {
 .contact-container .email {
   border: 1px solid #fff;
   padding: 10px 20px;
-  margin-bottom: 11px;
+  margin: 20px 0 40px 0;
 }
 .email {
   font-size: 26px;
